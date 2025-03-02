@@ -323,7 +323,7 @@ export const about = {
         {
           company: "amro97 Academy",
           position: "Founding developer at a startup",
-          duration: "FEB 2024 - Present",
+          duration: "FEB 2025 - Present",
           link: 'https://www.amro97-academy.com/',
           desc: 'I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.'
         }
