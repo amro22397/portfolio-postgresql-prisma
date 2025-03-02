@@ -68,7 +68,10 @@
     "Logout" : "تسجيل الخروج",
     "Hire Me": "قم بتعييني",
     "Log In": "تسجيل الدخول",
-    "About Me" : "نبذة عني"
+    "About Me" : "نبذة عني",
+    "Are you a job recruiter?": "هل أنت صاحب عمل ؟",
+    "If you want access" : "إذا كنت تريد رؤية حساب github الخاص بي تواصل معي عبر هذا الفورم",
+    "Click Here": "أضغط هنا"
     
   },
 

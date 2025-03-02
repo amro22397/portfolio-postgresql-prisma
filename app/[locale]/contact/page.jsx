@@ -46,7 +46,7 @@ const handleChange = () => {
 
         const formData = new FormData(e.target);
 
-          formData.append("access_key", "ce9610a5-e759-46bf-86a7-08b198f09ac4");
+          formData.append("access_key", "fdfbe3b9-e72d-44f0-a653-9be0118a84c3");
 
           const object = Object.fromEntries(formData);
           const json = JSON.stringify(object);
@@ -173,7 +173,7 @@ const handleChange = () => {
               <Button type='submit'
               size="md" className="max-w-40 py-2 bg-orange-600 hover:bg-orange-700
               active:bg-amber-800 text-white disabled:bg-gray-400" disabled={loading}>
-                {loading ? contactPage('Sending...') : contactPage('Send message')}
+                {loading ? contactPage('Sending') : contactPage('Send message')}
               </Button>
 
               {messageSuccess && (
@@ -181,7 +181,7 @@ const handleChange = () => {
                 gap-2">
                   <i class="fa-solid fa-circle-check
                   text-green-600 "></i>
-                  <span>{contactPage('Message sent successfully!')}</span>
+                  <span>{contactPage('Message sent successfully')}</span>
                 </div>
               )}
             </form>

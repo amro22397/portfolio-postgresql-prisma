@@ -31,9 +31,9 @@
   direction: rtl;
 }
 
-.right-dir {
+/* .right-dir {
   direction: rtl;
-}
+} */
 
 .right-dir * {
   direction: rtl;

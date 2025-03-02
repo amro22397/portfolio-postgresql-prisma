@@ -56,7 +56,7 @@
     "textAreaMessage": "Type your message here...",
     "Sending": "Sending...",
     "Send message": "Send message",
-    "Message sent successfully": "Message sent successfully!"
+    "Message sent successfully": "Message sent successfully!" 
     
   },
 
@@ -65,8 +65,15 @@
   "Header": {
     "Logout" : "Logout",
     "Hire Me": "Hire Me",
+    "Are you a job recruiter?": "Are you a job recruiter ?",
+    "About Me" : "About Me",
     "Log In": "Log In",
-    "About Me" : "About Me"
+    "If you want access" : "If you want to access my github profile contact me through this form",
+    "Click Here": "Click Here",
+    "Example3" : "About Me",
+    "Example4": "Log In",
+    "Example5" : "About Me"
+    
     
   },
 
