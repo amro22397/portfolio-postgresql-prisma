@@ -154,15 +154,15 @@ const page = () => {
                           <li
                             key={index}
                             className="bg-[#232329]/90
-                      dark:bg-neutral-700 py-6 px-10 rounded-xl
+                      dark:bg-neutral-700 py-6 md:px-10 px-4 rounded-xl
                       flex flex-col justify-center items-center lg:items-start gap-1 w-full"
                           >
                             <div className="flex flex-row justify-between items-center w-full
                             md:mb-0 mb-1">
-                              <p className="text-white/80 text-lg">
+                              <p className="text-white/80 md:text-lg">
                                 {item.company}
                               </p>
-                              <span className="text-white">
+                              <span className="text-white md:text-md">
                                 {item.duration}
                               </span>
                             </div>
