@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -71,7 +72,11 @@ export default async function RootLayout({ children, params: { locale } }: {
             
           <Header email={session?.user?.email} locale={locale} />
         
-        <PageTransition>{children}</PageTransition>
+        <PageTransition>
+          {children}
+        <Analytics />
+
+        </PageTransition>
 
         <Footer email={session?.user?.email} />
 

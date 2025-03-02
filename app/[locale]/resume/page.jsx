@@ -65,8 +65,8 @@ const page = () => {
       >
         <Tabs
           defaultValue={localStorage.getItem("tab") || "education"}
-          className={`flex flex-col xl:flex-row xl:gap-[60px] gap-[90px] xl:mt-20 mt-5
-            ${locale === 'ar' && 'xl:my-20 mt-24'}`}
+          className={`flex flex-col xl:flex-row xl:gap-[60px] gap-[90px] xl:mt-20 mt-20
+            ${locale === 'ar' && 'xl:mt-20 mt-24'}`}
         >
           <TabsList
             className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0
