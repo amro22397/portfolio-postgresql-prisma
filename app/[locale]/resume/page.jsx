@@ -132,11 +132,13 @@ const page = () => {
               )}
 
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                {pathName.includes("en") && (
+                { console.log(experience.arTitle) }
+                
                   <h3 className="text-4xl font-bold">
-                    {locale === "en" ? experience.title : experience.arTitle}
+                    {locale === "en" && experience.title}
+                    {locale === "ar" && experience.arTitle}
                   </h3>
-                )}
+                
 
                 {pathName.includes("ar") && <></>}
 
@@ -207,13 +209,13 @@ const page = () => {
               )}
 
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                {pathName.includes("en") && (
+             
                   <h3 className="text-4xl font-bold">
                     {locale === "en"
                       ? realProjectsExperience.title
                       : realProjectsExperience.arTitle}
                   </h3>
-                )}
+                
 
                 {pathName.includes("ar") && <></>}
 
