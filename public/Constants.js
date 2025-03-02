@@ -16,9 +16,10 @@ import { SiShadcnui } from "react-icons/si";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { useTranslations } from 'next-intl';
+import { title } from 'process';
 
 
-var dPast = 'March 1, 2024';
+var dPast = 'June 1, 2024';
 var d1 = new Date();
 var d2 = new Date(dPast);
 var dCalc = Math.abs((d1-d2)/31556952000);   // difference in milliseconds
@@ -313,7 +314,62 @@ export const about = {
   }
   
   export const experience = {
-      items: false,
+      icon: '',
+      title: 'My Experience',
+      arTitle: 'الخبرة العملية',
+      descripiton: '',
+      arDescripiton: '',
+      items: [
+        {
+          company: "amro97 Academy",
+          position: "Founding developer at a startup",
+          duration: "FEB 2024 - Present",
+          link: 'https://www.amro97-academy.com/',
+          desc: 'I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.'
+        }
+      ]
+    }
+
+
+    export const realProjectsExperience = {
+      icon: '',
+      title: 'Real Projects Experience',
+      arTitle: 'خبرة المشاريع الحقيقية',
+      descripiton: 'These are projects which i made by myself not by tutorial video, or made most of it by my coding and problem solving skills',
+      arDescripiton: 'هذه مشاريع صممتها بنفسي وليس عن طريق شرح فيديو ، أو قمت بتصميم معظمها عن طريق مهاراتي في البرمجة وحل المشكلات',
+      items: [
+        {
+          project: "amro97 Academy",
+          duration: "FEB 2025",
+          link: 'https://www.amro97-academy.com/',
+          desc: 'I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.',
+          features: ["Projects lists and youtube videos", "Dark mode", "Multi-language by next-intl", "Full Authentication"]
+        },
+
+        {
+          project: "Todo App",
+          duration: "JAN 2025",
+          link: 'https://todo-fullstack-nextjs15.vercel.app/to-dos',
+          desc: "I made this app for real use by myself to store different things that I want to do while I'm developing, firstly I followed a tutorial and after that i added others features like the sidebar and others and I think how to code them by myself",
+          features: ["Sidebar to select tasklists", "Dark mode", "Fullstack", "Full Authentication"]
+        },
+
+        {
+          project: "My Portfolio",
+          duration: "SEP 2024",
+          link: 'https://amro97-portfolio.vercel.app/',
+          desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete it, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
+          features: ["Dark mode", "Multi-language by next-intl", "Fullstack"]
+        },
+
+        {
+          project: "Web Dev Service",
+          duration: "JAN 2025",
+          link: 'https://www.wds-oman.com/',
+          desc: 'I made this freelance website to let people request me building websites for them as a freelancer.',
+          features: ["Dark mode", "Multi-language by next-intl"]
+        },
+      ]
     }
   
     export const education = {

@@ -24,7 +24,7 @@ const Nav = ({ locale }) => {
                     "border-b-2 text-gray-950 border-gray-950 dark:text-white dark:border-slate-200"
                     } text-gray-800 hover:text-gray-900 dark:text-slate-100 dark:hover:text-slate-200
                     transition-all duration-500
-                    ${locale === 'ar' ? 'text-[22px] 2xl:text-[16px] xl:text-[13px] sm:text-[22px]' : 'text-[18px]'}`}>
+                    ${locale === 'ar' ? 'text-[20px] 2xl:text-[16px] xl:text-[13px] sm:text-[22px]' : 'text-[18px]'}`}>
                     {pathname.includes("en") ? link.name : link.arName}
                 </Link>
             )

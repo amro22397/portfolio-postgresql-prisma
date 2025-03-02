@@ -36,7 +36,11 @@
     "No work experience": "There is no work experience yet....",
     "No Education": "There is no Education yet....",
     "Download Certificate": "Download Certificate",
-    "Download English Translation": "Download English Translation"
+    "Download English Translation": "Download English Translation",
+    "Real Projects Experience" : "Real Projects Experience",
+    "Example2": "Example",
+    "Example3": "Example",
+    "Example4" : "Example"
     
   },
 
@@ -88,6 +92,19 @@
     "Continue With Google": "Continue With Google",
     "Dont have an account?": "Don't have an account?",
     "Register": "Register"
+    
+  },
+
+  "expamle": {
+    "Example1" : "Example",
+    "Example2": "Example",
+    "Example3": "Example",
+    "Example4" : "Example",
+    "Example5": "Example",
+    "Example6": "Example",
+    "Example7": "Example",
+    "Example8": "Example",
+    "Example9": "Example"
     
   }
 }

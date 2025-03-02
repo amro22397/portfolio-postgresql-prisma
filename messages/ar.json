@@ -30,14 +30,16 @@
   },
 
   "ResumePage": {
-    "Experience" : "الخبرة",
+    "Experience" : "الخبرة العملية",
     "Education": "التعليم",
     "Skills": "المهارات",
     "About Me" : "نبذة عني",
     "No work experience": " ليس هنالك خبرة عملية بعد ...",
     "No Education": "ليس هنالك تعليم بعد ...",
     "Download Certificate": "حمل الشهادة",
-    "Download English Translation": "حمل الترجمة الإنجليزية للشهادة"
+    "Download English Translation": "حمل الترجمة الإنجليزية للشهادة",
+    "Real Projects Experience" : "خبرة المشاريع الحقيقية"
+
     
   },
 
