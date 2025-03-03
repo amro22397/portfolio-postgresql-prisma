@@ -358,7 +358,7 @@ export const about = {
           project: "My Portfolio",
           duration: "SEP 2024",
           link: 'https://amro97-portfolio.vercel.app/',
-          desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete it, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
+          desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete them, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
           features: ["Dark mode", "Multi-language by next-intl", "Fullstack"]
         },
 
