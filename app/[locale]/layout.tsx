@@ -55,6 +55,9 @@ export default async function RootLayout({ children, params: { locale } }: {
         @import
         url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
       </style>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2595619116828936"
+     crossOrigin="anonymous"></script>
       
       </head>
 
