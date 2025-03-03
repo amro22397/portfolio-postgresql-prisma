@@ -475,7 +475,7 @@ export const about = {
       },
       {
         icon: <SiNextdotjs />,
-        name: "NextJs"
+        name: "Next.js"
       },
       {
         icon: <SiShadcnui />,
