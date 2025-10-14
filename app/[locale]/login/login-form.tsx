@@ -51,6 +51,7 @@ import { toast } from "sonner";
 
 export default function LoginForm({
   className,
+  jUser,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const [loading, setLoading] = useState(false);
@@ -242,12 +243,12 @@ export default function LoginForm({
                 </Button>
               </div>
 
-              <div className="mt-0 text-center text-sm">
+              {/* <div className="mt-0 text-center text-sm">
                 {loginPage("Dont have an account?")}{" "}
                 <Link href={`/${locale}/register`} className="underline underline-offset-4">
                   {loginPage("Register")}
                 </Link>
-              </div>
+              </div> */}
             </div>
           </form>
         </CardContent>

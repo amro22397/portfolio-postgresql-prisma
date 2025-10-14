@@ -52,7 +52,7 @@ const page = async () => {
 
  
   if (!jUser?.user?.email) {
-    redirect(`/${locale}/register`);
+    redirect(`/${locale}/login`);
   }
 
     // revalidatePath('/');

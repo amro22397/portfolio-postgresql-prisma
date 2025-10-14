@@ -24,7 +24,7 @@ const page = async () => {
   return (
     <div className="dark:border-none flex h-[68.5vh] w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm dark:border-none">
-        <LoginForm /> 
+        <LoginForm jUser={jUser} /> 
       </div>
     </div>
 
