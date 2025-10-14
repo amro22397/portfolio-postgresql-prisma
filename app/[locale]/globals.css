@@ -19,6 +19,10 @@ body {
 
 
 @layer base {
+  /* html {
+    @apply text-black dark:bg-zinc-800 dark:text-white;
+  } */
+  
   body {
     @apply text-black dark:bg-zinc-800 dark:text-white;
   }

@@ -65,8 +65,8 @@ export default withUt({
 		}
 	},
 
-	plugins: [
-		require("tailwindcss-animate"),
-		heroui()
-	],
+	// plugins: [
+	// 	require("tailwindcss-animate"),
+	// 	heroui()
+	// ],
 });
