@@ -174,12 +174,12 @@ export default function LoginForm({
                   <Label htmlFor="password" className={`${formStyles}`}>
                     {loginPage("Password")}{" "}
                   </Label>
-                  <Link
+                  {/* <Link
                     href={`/${locale}/forgot-password`}
                     className="mx-5 inline-block text-sm underline-offset-4 hover:underline"
                   >
                     {loginPage("Forgot your password?")}
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className="relative">
