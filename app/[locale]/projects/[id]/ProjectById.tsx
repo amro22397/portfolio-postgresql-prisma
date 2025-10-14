@@ -81,14 +81,15 @@ const ProjectById = ({
                 mx-0 max-xl:mx-4 xl:w-full max-w-full "
         >
           <div
-            className=" flex flex-row items-center justify-between
-                    mb-10 max-xl:mt-4"
+            className={`flex flex-row items-center justify-between
+                    mb-10 max-xl:mt-4 ${locale === "ar" && "sm:flex-row flex-col max-sm:gap-y-4 items-start"}`}
+                    
           >
             <Link href={`/${locale}/projects`}>
               <button
-                className="bg-yellow-500 px-4 py-[4px] text-orange-800 rounded-sm
+                className={`bg-yellow-500 px-4 py-[4px] text-orange-800 rounded-sm
                 font-semibold hover:bg-yellow-400 active:bg-yellow-300 transition-all duration-100
-                flex flex-row items-center gap-2"
+                flex flex-row items-center gap-2 ${locale === "ar" && ""}`}
               >
                 {locale === "en" && (
                   <i
