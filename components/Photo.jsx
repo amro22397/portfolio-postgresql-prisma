@@ -31,7 +31,7 @@ const Photo = () => {
             priority
             fill
             quality={100}
-            alt=""
+            alt="land page photo"
             className='object-contain' />
 
         </motion.div>

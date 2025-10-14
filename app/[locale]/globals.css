@@ -42,7 +42,8 @@ body {
 
 .tabs-trigger {
   @apply bg-gray-700 w-[365px] py-[12px] hover:bg-gray-600 text-lg
-  dark:bg-stone-700 dark:hover:bg-stone-600 transition-all duration-200;
+  dark:bg-stone-700 dark:hover:bg-stone-600 transition-all duration-200 text-center
+  flex items-center justify-center;
 }
 
 .resume-to-right {

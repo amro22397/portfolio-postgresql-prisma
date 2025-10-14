@@ -269,9 +269,9 @@ export const about = {
       },
       {
         fieldName: "Whatsapp Number",
-        fieldValue: "+249995291772",
+        fieldValue: "+96879335801",
         arFieldName: "رقم الواتساب",
-        arFieldValue: "+249995291772"
+        arFieldValue: "+96879335801"
       },
       {
         fieldName: "Experience",
