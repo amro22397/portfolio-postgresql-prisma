@@ -408,33 +408,33 @@ export const about = {
           englishTranslation: "/certificates/High School Translated Certificate.pdf",
         },
   
-        {
-          duration: "MAR 2024",
-          degree: "BIM Fundamentals Certification (Building Information Modeling) - Structure Design",
-          institution: "Coursera Website - University Of Taiwan",
-          certificateDownload: "/certificates/BIM Fundamentals by Coursera.pdf",
-        },
+        // {
+        //   duration: "MAR 2024",
+        //   degree: "BIM Fundamentals Certification (Building Information Modeling) - Structure Design",
+        //   institution: "Coursera Website - University Of Taiwan",
+        //   certificateDownload: "/certificates/BIM Fundamentals by Coursera.pdf",
+        // },
   
-        {
-          duration: "FEB 2024",
-          degree: "Learning AutoCAD 2024",
-          institution: "LinkedIn Learning",
-          certificateDownload: "/certificates/Learning AutoCAD 2024.pdf",
-        },
+        // {
+        //   duration: "FEB 2024",
+        //   degree: "Learning AutoCAD 2024",
+        //   institution: "LinkedIn Learning",
+        //   certificateDownload: "/certificates/Learning AutoCAD 2024.pdf",
+        // },
   
-        {
-          duration: "FEB 2024",
-          degree: "Learning Revit 2024",
-          institution: "LinkedIn Learning",
-          certificateDownload: "/certificates/Learning Revit 2024.pdf",
-        },
+        // {
+        //   duration: "FEB 2024",
+        //   degree: "Learning Revit 2024",
+        //   institution: "LinkedIn Learning",
+        //   certificateDownload: "/certificates/Learning Revit 2024.pdf",
+        // },
 
-        {
-          duration: "NOV 2014 - DEC 2021",
-          degree: "Bachelor of Science (B.S.) in Civil Engineering",
-          institution: "University Of Khartoum, Sudan",
-          certificateDownload: "/certificates/University Certificate Details.pdf",
-        },
+        // {
+        //   duration: "NOV 2014 - DEC 2021",
+        //   degree: "Bachelor of Science (B.S.) in Civil Engineering",
+        //   institution: "University Of Khartoum, Sudan",
+        //   certificateDownload: "/certificates/University Certificate Details.pdf",
+        // },
 
       ],
     }

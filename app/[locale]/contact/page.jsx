@@ -102,7 +102,8 @@ const handleChange = () => {
      xl:max-w-[1400px] mx-auto'
     >
       <div className="containter mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
+        <div className={`flex flex-col xl:flex-row 
+          ${locale === "ar" ? "gap-x-40" : "gap-x-[30px]"}`}>
 
           <div className={`xl:h-[54%] order-2 xl:order-none
             ${pathName.includes('ar') ? 'xl:max-w-[675px]' : ''}`}>

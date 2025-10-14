@@ -51,9 +51,9 @@ const page = async () => {
  console.log(jUser)
 
  
-  if (!jUser?.user?.email) {
-    redirect(`/${locale}/login`);
-  }
+  // if (!jUser?.user?.email) {
+  //   redirect(`/${locale}/login`);
+  // }
 
     // revalidatePath('/');
 
