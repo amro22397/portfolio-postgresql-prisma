@@ -248,14 +248,17 @@ const ProjectFormForId = ({ projects, id, email}: {
             <span>Title:</span>
             <input defaultValue={jProject ? jProject.title : ''}
             onChange={handleChange} id="title"
-            type="text" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
+            type="text" className={`bg-gray-400 border-2 border-black rounded-xl ml-4
+            ${locale === "ar" && "mr-4"}`}
+            />
         </label>
 
         <label className='flex flex-row justify-between'>
             <span>Description:</span>
             <textarea defaultValue={jProject ? jProject.description : ''}
              onChange={handleChange} id="description"
-            className='bg-gray-400 border-2 border-black rounded-xl ml-4 px-2'
+            className={`bg-gray-400 border-2 border-black rounded-xl ml-4 px-2
+            ${locale === "ar" && "mr-4"}`}
             rows={4}/>
         </label>
 
@@ -303,21 +306,24 @@ const ProjectFormForId = ({ projects, id, email}: {
             <span>Web Link:</span>
             <input defaultValue={jProject ? jProject.link : ''}
             onChange={handleChange} id="link"
-             type="text" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
+             type="text" className={`bg-gray-400 border-2 border-black rounded-xl ml-4
+            ${locale === "ar" && "mr-4"}`}/>
         </label>
 
         <label className='flex flex-row justify-between'>
             <span>Youtube Link:</span>
             <input defaultValue={jProject ? jProject.youtubeLink : ''}
             onChange={handleChange} id="youtubeLink"
-             type="text" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
+             type="text" className={`bg-gray-400 border-2 border-black rounded-xl ml-4
+            ${locale === "ar" && "mr-4"}`}/>
         </label>
 
         <label className='flex flex-row justify-between'>
             <span>Date:</span>
             <input defaultValue={jProject ? jProject.date : ''}
             onChange={handleChange} id="date"
-             type="date" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
+             type="date" className={`bg-gray-400 border-2 border-black rounded-xl ml-4
+            ${locale === "ar" && "mr-4"}`}/>
         </label>
 
         <label className='flex flex-row gap-5'>
@@ -325,7 +331,8 @@ const ProjectFormForId = ({ projects, id, email}: {
             
              <select defaultValue={jProject ? jProject.category : ''}
              onChange={handleChange}
-             id="category" className='bg-gray-400 border-2 border-black rounded-xl ml-4 px-1'>
+             id="category" className={`bg-gray-400 border-2 border-black rounded-xl ml-4 px-1
+            ${locale === "ar" && "mr-4"}`}>
                 <option>--</option>
                 <option>Frontend</option>
                 <option>Fullstack</option>
