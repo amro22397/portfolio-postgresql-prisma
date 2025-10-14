@@ -207,6 +207,8 @@ const page = async (/* { params }: PageProps */) => {
     <div className="flex flex-col items-center w-full">
 
       {/* <pre className="hidden">{id}</pre> */}
+
+      {/* <pre>{JSON.stringify(jAllProjects, null, 2)}</pre> */}
       
       <BackToProjects />
 

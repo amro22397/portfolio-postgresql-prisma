@@ -20,7 +20,7 @@ import ProjectFormForId from '@/app/[locale]/add-project/ProjectFormForId';
 // import ReactPlayer from 'react-player'
 
 export type Project = {
-  _id?: string;
+  id?: string;
   title?: string,
   description?: string,
   technologies?: string,

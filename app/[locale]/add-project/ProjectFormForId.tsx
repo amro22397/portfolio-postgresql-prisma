@@ -33,7 +33,7 @@ const ProjectFormForId = ({ projects, id, email}: {
 
     const route = useRouter();
 
-    const allProjects = projects?.find((project: any) => project._id === id) || null;
+    const allProjects = projects?.find((project: any) => project.id === id) || null;
         const jProject = JSON.parse(JSON.stringify(allProjects)) || null;
 
 
@@ -135,7 +135,7 @@ const ProjectFormForId = ({ projects, id, email}: {
           // Edit project function
 
           if (id) {
-            const data = { id: jProject._id, ...formData}
+            const data = { id: jProject.id, ...formData}
 
             const res = await fetch('/api/edit-project', {
                 method: 'PUT',
@@ -148,7 +148,7 @@ const ProjectFormForId = ({ projects, id, email}: {
             setLoading(false)
 
             if (res.ok) {
-                route.push(`/${locale}/projects/${jProject._id}`)
+                route.push(`/${locale}/projects/${jProject.id}`)
             } else {
                 console.log(res)
                 setErrorMessage('Error adding project')
