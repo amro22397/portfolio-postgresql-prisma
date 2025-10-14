@@ -82,7 +82,7 @@ style={{fontFamily: "Arial, Helvetica, sans-serif"}}
 max-sm:grid-cols-1 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2">
 
     {projects.length > 0 && projects.map((project, index) => (
-        <Link key={index} href={`/${locale}/projects/${project._id}`}
+        <Link key={index} href={`/${locale}/projects/${project.id}`}
         className=''>
          <div key={index} className="flex flex-col justify-start items-center
         bg-[#232329]/90 dark:bg-stone-700 gap-3 shadow-lg mb-3 transform hover:scale-[1.01] transition-all duration-300 ease-in-out
@@ -95,8 +95,8 @@ max-sm:grid-cols-1 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2">
             {/* {email && email === "amroalmutasim22@gmail.com" && (
                 <div className="absolute top-2 right-[10px]
                 flex flex-row gap-3 items-center text-xl bg-green-600/95 rounded-full px-2 py-1">
-                    <FaArrowLeft onClick={() => handleLeft(project._id)} />
-                    <FaArrowRight onClick={() => handleRight(project._id)} />
+                    <FaArrowLeft onClick={() => handleLeft(project.id)} />
+                    <FaArrowRight onClick={() => handleRight(project.id)} />
                 </div>
             )} */}
             

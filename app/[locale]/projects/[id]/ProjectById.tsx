@@ -38,7 +38,7 @@ const ProjectById = ({
 
   const id = params.id;
 
-  const project = projects.find((project: any) => project._id === id);
+  const project = projects.find((project: any) => project.id === id);
   const jProject = JSON.parse(JSON.stringify(project));
 
   console.log(jProject);
