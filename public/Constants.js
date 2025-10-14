@@ -335,8 +335,8 @@ export const about = {
       icon: '',
       title: 'Real Projects Experience',
       arTitle: 'خبرة المشاريع الحقيقية',
-      descripiton: 'These are projects which i made by myself not by tutorial video, or made most of it by my coding and problem solving skills',
-      arDescripiton: 'هذه مشاريع صممتها بنفسي وليس عن طريق شرح فيديو ، أو قمت بتصميم معظمها عن طريق مهاراتي في البرمجة وحل المشكلات',
+      descripiton: 'These are projects which i made by myself or made most of them by my coding and problem solving skills',
+      arDescripiton: 'هذه مشاريع صممتها بنفسي أو قمت بتصميم معظمها عن طريق مهاراتي في البرمجة وحل المشكلات',
       items: [
         {
           project: "amro97 Academy",
