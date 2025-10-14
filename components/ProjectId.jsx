@@ -16,12 +16,16 @@ import { projects } from '../public/Constants';
 import mongoose from 'mongoose'
 import { Project } from "../models/project";
 
+import prisma from "../lib/prisma"
+
 
 const ProjectsID = async ({ id }) => {
 
-    mongoose.connect(process.env.MONGO_URL)
+    // mongoose.connect(process.env.MONGO_URL)
 
-    const projectsArray = await Project.find()
+    // const projectsArray = await Project.find()
+
+    const projectsArray = await prisma.project.findMany();
 
     const project = projects[0];
 

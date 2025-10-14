@@ -1,19 +1,19 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-import { useParams, useRouter } from 'next/navigation';
-import { UploadButton } from "../utils/uploadthing";
+import { useParams } from 'next/navigation';
+// import { UploadButton } from "../utils/uploadthing";
 
-import { useSession } from 'next-auth/react'
-import { skills } from '../public/Constants';
+// import { useSession } from 'next-auth/react'
+// import { skills } from '../public/Constants';
 
 
 
 
 import './ProjectForm.css'
-import Image from 'next/image';
-import { set } from 'mongoose';
+// import Image from 'next/image';
+// import { set } from 'mongoose';
 
 import ProjectFormForId from '@/app/[locale]/add-project/ProjectFormForId';
 

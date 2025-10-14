@@ -8,11 +8,12 @@ import "swiper/css"; */
 
 
 import { getSession } from '@/actions/getUser';
-import { headers } from "next/headers";
+// import { headers } from "next/headers";
 import ProjectById from './ProjectById';
 import { Project } from '@/models/project';
 import mongoose from 'mongoose';
 import { getLocale } from 'next-intl/server';
+import prisma from '@/lib/prisma';
 
 
 
@@ -39,11 +40,15 @@ export default async function page(/*props: PageProps*/) {
     // const project = await Project.findById({_id: id})
     // const jProject = JSON.parse(JSON.stringify(project))
 
-    mongoose.connect(process.env.MONGO_URL as string)
+    // mongoose.connect(process.env.MONGO_URL as string)
 
-    const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
+    // const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
 
-    const jAllProjects = JSON.parse(JSON.stringify(allProjects));
+    // const jAllProjects = JSON.parse(JSON.stringify(allProjects));
+
+    const jAllProjects = await prisma.project.findMany({
+      orderBy: { createdAt: "desc" },
+    })
 
     // const project = jAllProjects.find((project: any) => project._id === id);
     // const jProject = JSON.parse(JSON.stringify(project));

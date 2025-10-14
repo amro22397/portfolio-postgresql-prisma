@@ -1,27 +1,27 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SwiperImage from "../../../../components/SwiperImage";
-import { FaArrowRight } from "react-icons/fa";
-import { IoMdArrowBack } from "react-icons/io";
+// import { FaArrowRight } from "react-icons/fa";
+// import { IoMdArrowBack } from "react-icons/io";
 
 import Link from "next/link";
-import Image from "next/image";
-import WorkSliderBtns from "../../../../components/WorkSliderBtns";
-import exp from "constants";
+// import Image from "next/image";
+// import WorkSliderBtns from "../../../../components/WorkSliderBtns";
+// import exp from "constants";
 
-import { title } from "process";
+// import { title } from "process";
 
-import { projects } from "../../../../public/Constants";
+// import { projects } from "../../../../public/Constants";
 
-import { useParams, usePathname } from "next/navigation";
-import mongoose from "mongoose";
-import { Project } from "../../../../models/project";
+import { useParams } from "next/navigation";
+// import mongoose from "mongoose";
+// import { Project } from "../../../../models/project";
 
 import EditDeleteButtons from "../../../../components/EditDeleteButtons";
-import axios from "axios";
-import useSWR from "swr";
-import { useLocale, useTranslations } from "next-intl";
+// import axios from "axios";
+// import useSWR from "swr";
+import { useTranslations } from "next-intl";
 
 const ProjectById = ({
   /*id*/ email,

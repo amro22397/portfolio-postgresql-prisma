@@ -12,15 +12,15 @@ import { title } from 'process';
 
 import { projects } from '../public/Constants';
 
-import mongoose from 'mongoose'
-import { Project } from "../models/project";
+// import mongoose from 'mongoose'
+// import { Project } from "../models/project";
 
 
 const projectsID = async ({id}) => {
 
-    mongoose.connect(process.env.MONGO_URL)
+    // mongoose.connect(process.env.MONGO_URL)
 
-    const project = await Project.findById({_id: id});
+    // const project = await Project.findById({_id: id});
 
 
 
