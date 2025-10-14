@@ -16,7 +16,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel,
   import { motion } from 'framer-motion';
 import { SelectValue } from '@radix-ui/react-select'
 import { usePathname, useRouter } from 'next/navigation'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 const page = () => {
@@ -91,6 +91,8 @@ const handleChange = () => {
     }
 
     const contactPage = useTranslations('ContactPage')
+
+    const locale = useLocale();
     
   return (
     <motion.section 
@@ -187,8 +189,8 @@ const handleChange = () => {
             </form>
           </div>
 
-          <div className="flex items-center xl:justify-end order-1
-          xl:order-none mb-8 xl:mb-0 mx-auto">
+          <div className={`flex items-center xl:justify-end order-1
+          xl:order-none mb-8 xl:mb-0 mx-auto ${locale === "ar" && "mr-2"}`}>
             <ul className=''>
               {info.map((item, index) => {
 
