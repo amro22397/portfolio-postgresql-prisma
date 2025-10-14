@@ -15,6 +15,8 @@ const ProjectsFilter = ({allProjects, frontEndProjects, fullStackProjects, email
 
 const [projects, setProjects] = useState(fullStackProjects);
 
+console.log(projects)
+
 
 // const handleRight = (id) => {
 //         try {

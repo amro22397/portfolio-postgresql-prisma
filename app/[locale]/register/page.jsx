@@ -1,82 +1,31 @@
-"use client"
 
-import React, { useState } from 'react'
+import { getUser } from "@/actions/getUser";
+import { RegisterForm } from "@/components/register-form"
+import { redirect } from "next/navigation";
+// import { useSession } from "next-auth/react"
+// import { useRouter } from "next/navigation";
+// import { useEffect } from "react";
 
-const page = () => {
-    const [formData, setFormData] = useState({});
-    console.log(formData)
+export default async function Page() {
+
+  const session = await getUser();
+  const jUser = JSON.parse(JSON.stringify(session) || '{}')
+
+      console.log(jUser);
     
+    
+        if (jUser?.user?.email) {
+          redirect('/');
+        }
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.id] : e.target.value
-        })
-    }
+        // ss
 
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-    const [userCreated, setUserCreated] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        setLoading(true);
-        const res = await fetch('/api/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
-
-          if (res.ok) {
-            setError(false)
-            setUserCreated(true)
-          } else {
-            setError(true)
-            console.log(error)
-            setUserCreated(false)
-          }
-          setLoading(false)
-    }
 
   return (
-    <div className='flex flex-col items-center'>
-      <h1 className='mb-4'>create user</h1>
-
-      <form onSubmit={handleSubmit}
-      className='gap-4 flex flex-col'>
-        <label className='flex flex-row justify-between'>
-            <span>User name:</span>
-            <input onChange={handleChange} id="username"
-            type="name" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
-        </label>
-
-        <label className='flex flex-row justify-between'>
-            <span>Email:</span>
-            <input onChange={handleChange} id="email"
-            type="email" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
-        </label>
-
-        <label className='flex flex-row justify-between'>
-            <span>Password:</span>
-            <input onChange={handleChange} id="password"
-             type="password" className='bg-gray-400 border-2 border-black rounded-xl ml-4'/>
-        </label>
-
-        <button type='submit'
-        className='bg-yellow-700 text-white px-3 py-1 rounded-full my-4'
-      >{loading ? 'Creating...' : 'Create User'}</button>
-
-      {userCreated && (
-        <p>User created successfully</p>
-      )}
-      </form>
-
-      
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <RegisterForm />
+      </div>
     </div>
   )
 }
-
-export default page

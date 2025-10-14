@@ -8,7 +8,7 @@ const ProjectSchema = new Schema(
 
     description: {
       type: String,
-    },
+    }, 
 
     technologies: {
       type: String,

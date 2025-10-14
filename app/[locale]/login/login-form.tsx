@@ -1,5 +1,30 @@
 "use client";
 
+// import { cn } from "@/lib/utils";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+// import { Input } from "@/components/ui/input";
+// import { Label } from "@/components/ui/label";
+// import Image from "next/image";
+// import { useState } from "react";
+// import { signIn, useSession } from "next-auth/react";
+// // import { CircularProgress } from "@mui/material"
+// // import { UserAuth } from "@/context/AuthContext"
+// // import { useRouter } from "next/navigation";
+// import { EyeIcon, EyeOffIcon, Loader2 } from "lucide-react";
+// import { useLocale, useTranslations } from "next-intl";
+// import Link from "next/link";
+
+
+
+
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,17 +34,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/3input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 // import { CircularProgress } from "@mui/material"
 // import { UserAuth } from "@/context/AuthContext"
-import { useRouter } from "next/navigation";
-import { EyeIcon, EyeOffIcon, Loader, Loader2 } from "lucide-react";
+// import { useRouter } from "next/navigation";
+import { EyeIcon, EyeOffIcon, Loader2 } from "lucide-react";
+
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import axios from "axios";
+import { toast } from "sonner";
 
 export default function LoginForm({
   className,
@@ -32,7 +60,9 @@ export default function LoginForm({
   // const { user, googleSignIn, logOut } = UserAuth();
   // console.log(user);
 
-  const router = useRouter();
+  // const router = useRouter();
+
+  const locale = useLocale();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -51,7 +81,7 @@ export default function LoginForm({
 
     setLoadingGoogle(true);
 
-    await signIn("google", { callbackUrl: "/" });
+    await signIn("google", { callbackUrl: `/${locale}/` });
     setLoadingGoogle(false);
   };
 
@@ -59,9 +89,26 @@ export default function LoginForm({
     e.preventDefault();
     setLoading(true);
 
-    await signIn("credentials", { ...formData, callbackUrl: "/" });
+    const res = await axios.post("/api/login", { ...formData, locale });
 
-    setLoading(false);
+    console.log(res)
+
+    if (!res.data.success) {
+      toast.error(`${res.data.message}`);
+      setLoading(false);
+      return
+    }
+
+    if (res.data.success) {
+      await signIn("credentials", { ...formData, callbackUrl: `/${locale}/` });
+      setLoading(false);
+    }
+
+    
+
+    
+
+    
   };
 
   /*    useEffect(() => {
@@ -75,13 +122,12 @@ export default function LoginForm({
   console.log(formData);
 
   const formStyles = `text-md`;
-  const iconClass = `absolute top-2 text-gray-500 cursor-pointer`;
+  const iconClass = `absolute right-4 top-2 text-gray-500 cursor-pointer`;
 
   const session = useSession();
   console.log(session);
 
   const loginPage = useTranslations("LoginPage");
-  const locale = useLocale();
 
   return (
     <div
@@ -118,8 +164,7 @@ export default function LoginForm({
                   placeholder="m@example.com"
                   defaultValue={formData.email}
                   onChange={handleChange}
-                  className="bg-white border border-gray-800/40 rounded-md px-3 py-0 placeholder:text-gray-400 mx-0 my-0 h-[39px]
-                  text-black focus:border-gray-800/40 w-full"
+                  className="input-class"
                   required
                 />
               </div>
@@ -129,7 +174,7 @@ export default function LoginForm({
                     {loginPage("Password")}{" "}
                   </Label>
                   <Link
-                    href="/forgot-password"
+                    href={`/${locale}/forgot-password`}
                     className="mx-5 inline-block text-sm underline-offset-4 hover:underline"
                   >
                     {loginPage("Forgot your password?")}
@@ -142,8 +187,7 @@ export default function LoginForm({
                     type={type}
                     defaultValue={formData.password}
                     onChange={handleChange}
-                    className="bg-white border border-gray-800/40 rounded-md px-3 py-0 placeholder:text-gray-400 mx-0 my-0 h-[39px]
-                  text-black focus:border-gray-800/40 w-full"
+                    className="input-class"
                     required
                   />
 
@@ -169,7 +213,7 @@ export default function LoginForm({
               </div>
 
               <div className="flex flex-col gap-4">
-                <Button type="submit" className="w-full bg-green-500">
+                <Button type="submit" className="w-full bg-green-500 text-white">
                   {loading ? (
                     <Loader2 className="animate-spin" />
                   ) : (
@@ -200,14 +244,130 @@ export default function LoginForm({
 
               <div className="mt-0 text-center text-sm">
                 {loginPage("Dont have an account?")}{" "}
-                <a href="/register" className="underline underline-offset-4">
+                <Link href={`/${locale}/register`} className="underline underline-offset-4">
                   {loginPage("Register")}
-                </a>
+                </Link>
               </div>
             </div>
           </form>
         </CardContent>
       </Card>
     </div>
+
+
+    // <div className={cn("flex flex-col gap-6", className)} {...props}>
+    //   <Card className="bg-zinc-200/55 shadow-md
+    //   dark:bg-zinc-600 dark:shadow-md">
+    //     <CardHeader>
+    //       <CardTitle className="text-2xl">{loginPage("Login")}</CardTitle>
+    //       <CardDescription className="text-gray-600 dark:text-gray-200">
+    //         {loginPage("ُEnterYourEmailAddress")}
+    //       </CardDescription>
+    //     </CardHeader>
+    //     <CardContent>
+    //       <form onSubmit={handleSubmit}>
+    //         <div className="flex flex-col gap-6">
+    //           <div className="grid gap-2">
+    //             <Label htmlFor="email" className={`${formStyles}`}>
+    //               {loginPage("Email")}
+    //             </Label>
+    //             <Input
+    //               id="email"
+    //               type="email"
+    //               placeholder="m@example.com"
+    //               className="dark:placeholder-white"
+    //               dir="ltr"
+    //               defaultValue={formData.email}
+    //               onChange={handleChange}
+    //               required
+    //             />
+    //           </div>
+    //           <div className="grid gap-2">
+    //             <div className="flex items-center">
+    //               <Label htmlFor="password" className={`${formStyles}`}>
+    //                 {loginPage("Password")}
+    //               </Label>
+    //               <Link
+    //                 href={`/${locale}/forgot-password`}
+    //                 className="mx-2 inline-block text-sm underline-offset-4 hover:underline"
+    //               >
+    //                 {loginPage("Forgot your password?")}
+    //               </Link>
+    //             </div>
+
+    //             <div className="relative">
+    //               <Input
+    //                 id="password"
+    //                 type={type}
+    //                 defaultValue={formData.password}
+    //                 dir="ltr"
+    //                 onChange={handleChange}
+    //                 required
+    //               />
+
+    //               {type === "password" && formData.password ? (
+    //                 <span
+    //                 className={`${locale === "en" ? "icon-class" : "icon-class"}`}
+    //                   onClick={() => setType("text")}
+    //                 >
+    //                   <EyeIcon className="w-5 h-5" />
+    //                 </span>
+    //               ) : (
+    //                 type === "text" &&
+    //                 formData.password && (
+    //                   <span
+    //                   className={`${locale === "en" ? "icon-class" : "icon-class"}`}
+    //                     onClick={() => setType("password")}
+    //                   >
+    //                     <EyeOffIcon className="w-5 h-5" />
+    //                   </span>
+    //                 )
+    //               )}
+    //             </div>
+    //           </div>
+
+    //           <div className="flex flex-col gap-3">
+    //             <Button
+    //               type="submit"
+    //               className="w-full bg-green-500 hover:bg-green-500/95 active:bg-green-500/90 text-white "
+    //             >
+    //               {loading ? <Loader2 className="animate-spin" /> : loginPage("LoginButton")}
+    //             </Button>
+    //             <Button
+    //               variant="outline"
+    //               className="w-full dark:text-black dark:bg-white dark:border-none"
+    //               onClick={handleSignWithGoogle}
+    //               type="button"
+    //             >
+    //               {loadingGoogle ? (
+    //                 <Loader2 className="animate-spin" />
+    //               ) : (
+    //                 <>
+    //                   <Image
+    //                     src={"/Google_Icons-09-512.webp"}
+    //                     width={24}
+    //                     height={24}
+    //                     alt="Google logo"
+    //                   />
+    //                   {loginPage("Continue With Google")}
+    //                 </>
+    //               )}
+    //             </Button>
+    //           </div>
+
+    //           <div className="mt-0 text-center text-sm">
+    //             {loginPage("Don't have an account?")}
+    //             <Link
+    //               href={`/${locale}/register`}
+    //               className="hover:underline active:text-gray-800 underline-offset-4 mx-1"
+    //             >
+    //               {loginPage("Register")}
+    //             </Link>
+    //           </div>
+    //         </div>
+    //       </form>
+    //     </CardContent>
+    //   </Card>
+    // </div>
   );
 }

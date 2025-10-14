@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation';
 import { UploadButton } from "@/utils/uploadthing";
 
-import { useSession } from 'next-auth/react'
+// import { useSession } from 'next-auth/react'
 import { skills } from '@/public/Constants';
 
 
@@ -16,8 +16,9 @@ import { skills } from '@/public/Constants';
 import '@/components/ProjectForm.css'
 
 import Image from 'next/image';
-import { set } from 'mongoose';
+// import { set } from 'mongoose';
 import { Project } from '@/components/ProjectForm';
+import prisma from '@/lib/prisma';
 
 
 
@@ -117,7 +118,7 @@ const ProjectFormForId = ({ projects, id, email}: {
     }
 
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState<string>();
 
     const handleSubmitform = async (e: any) => {

@@ -4,39 +4,22 @@ import { signIn } from "next-auth/react";
 import LoginForm from './login-form';
 import { getSession } from '@/actions/getUser';
 import { redirect } from 'next/navigation';
+import { getUser } from "@/actions/getUser";
+
 
 
 const page = async () => {
 
-  const session = await getSession();
-  console.log(session?.user?.email)
+  const session = await getUser();
+  const jUser = JSON.parse(JSON.stringify(session) || '{}')
 
-    // const [loading, setLoading] = useState(false);
-    // const [error, setError] = useState(false);
-    // const [userCreated, setUserCreated] = useState(false);
 
-    // const [formData, setFormData] = useState({});
-
-    // console.log({...formData})
-    
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-
-    //     await signIn('credentials', {...formData, callbackUrl: '/'});
-    //     setLoading(false);
-    // }
-
-    // const handleChange = async (e) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.id] : e.target.value,
-    //     })
-    // }
-
-    if (session?.user?.email) {
-      redirect('/');
-    }
+    console.log(jUser);
+  
+  
+      if (jUser?.user?.email) {
+        redirect('/');
+      }
     
   return (
     <div className="dark:border-none flex h-[68.5vh] w-full items-center justify-center p-6 md:p-10">

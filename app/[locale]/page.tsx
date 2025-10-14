@@ -1,52 +1,75 @@
-import Social from '../../components/Social'
+// import Social from '../../components/Social'
 import { Button } from '../../components/ui/button'
 import { FiDownload } from 'react-icons/fi' 
 import React from 'react'
 import Photo from '../../components/Photo'
 import Stats from '../../components/Stats'
-import mongoose from 'mongoose'
-import { Project } from '../../models/project'
-import { revalidatePath } from 'next/cache'
+// import mongoose from 'mongoose'
+// import { Project } from '../../models/project'
+// import { revalidatePath } from 'next/cache'
 import { skills } from '../../public/Constants'
+// import EmailIsNotVerified from '@/components/EmailIsNotVerified';
 
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiJquery } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiTailwindcss, SiGithub } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa6";
-import { SiReactquery } from "react-icons/si";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+// import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from 'react-icons/fa'
+// import { SiJquery } from "react-icons/si";
+// import { SiExpress } from "react-icons/si";
+// import { SiMongodb } from "react-icons/si";
+// import { SiNextdotjs } from "react-icons/si";
+// import { SiTailwindcss, SiGithub } from "react-icons/si";
+// import { FaGitAlt } from "react-icons/fa6";
+// import { SiReactquery } from "react-icons/si";
 
-import { Edit, User } from 'lucide-react'
+// import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+
+// import { Edit, User } from 'lucide-react'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server'
+import prisma from '@/lib/prisma'
+import { getUser } from '@/actions/getUser'
+import { redirect } from 'next/navigation'
 
 
 
 const page = async () => {
 
-  mongoose.connect(process.env.MONGO_URL as string)
+  // mongoose.connect(process.env.MONGO_URL as string)
 
-    const projects = await Project.find({}, {}, {sort: {createdAt: -1}});
-    const jProjects = JSON.parse(JSON.stringify(projects));
+    // const projects = await Project.find({}, {}, {sort: {createdAt: -1}});
+    // const jProjects = JSON.parse(JSON.stringify(projects));
+
+    const jProjects = await prisma.project.findMany({
+      orderBy: { createdAt: 'desc' }
+    })
+
+    const user = await getUser();
+ const jUser = JSON.parse(JSON.stringify(user) || '{}')
+ const locale = await getLocale();
+
+ console.log(jUser)
+
+ 
+  if (!jUser?.user?.email) {
+    redirect(`/${locale}/register`);
+  }
 
     // revalidatePath('/');
 
-    console.log(projects)
+    console.log(jProjects)
     // const t = useTranslations('HomePage');
     const homePage = await getTranslations('HomePage');
 
-    const locale = await getLocale();
+
+
+    
 
 
 
   return (
     <section className={`${locale === 'ar' && 'right-dir'}`}>
+      
       <div className="mx-auto h-full flex justify-center flex-col
       ">
         <div className="flex flex-col xl:flex-row items-center justify-between

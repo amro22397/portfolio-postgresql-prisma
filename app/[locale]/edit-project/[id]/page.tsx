@@ -1,9 +1,10 @@
 import ProjectForm from "../../../../components/ProjectForm";
-import { Project } from "../../../../models/project";
-import Link from "next/link";
+// import { Project } from "../../../../models/project";
+// import Link from "next/link";
 import { getSession } from "@/actions/getUser";
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 import BackToProjects from "@/components/BackToProjects";
+import prisma from "@/lib/prisma";
 
 
 
@@ -25,11 +26,15 @@ const page = async (/* { params }: PageProps */) => {
 
 // const id = pathname?.split('/')[4]
           
-          mongoose.connect(process.env.MONGO_URL as string)
+          // mongoose.connect(process.env.MONGO_URL as string)
 
-    const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
+    // const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
 
-    const jAllProjects = JSON.parse(JSON.stringify(allProjects));
+    // const jAllProjects = JSON.parse(JSON.stringify(allProjects));
+
+    const jAllProjects = await prisma.project.findMany({
+      orderBy: { createdAt: 'desc' }
+    })
 
     const session = await getSession();
           console.log(session?.user?.email)

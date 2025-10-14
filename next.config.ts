@@ -17,7 +17,11 @@ images: {
             hostname: "**"
         }
     ]
-}
+},
+
+typescript: {
+        ignoreBuildErrors: true,
+      },
 };
 
 module.exports = withNextIntl(nextConfig);

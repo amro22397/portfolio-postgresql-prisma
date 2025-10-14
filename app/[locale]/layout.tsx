@@ -4,18 +4,22 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Header";
 import PageTransition from "../../components/PageTransition";
-import StairTransition from '../../components/StairTransition'
+// import StairTransition from '../../components/StairTransition'
 
 import Footer from '../../components/Footer'
 import { Providers } from "./provider";
 import AppProvider from "../../AppContext.js"
 import React from "react";
-import { getSession } from "@/actions/getUser";
+import { getSession, getUser } from "@/actions/getUser";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import styles from "./layout.module.css"; 
+import prisma from '@/lib/prisma';
+import EmailIsNotVerified from '@/components/EmailIsNotVerified';
+import { Toaster } from "@/components/ui/sonner"
+
 
 
 
@@ -45,6 +49,17 @@ export default async function RootLayout({ children, params: { locale } }: {
 
   const messages = await getMessages();
 
+  const user = await getUser();
+ const jUser = JSON.parse(JSON.stringify(user) || '{}')
+ 
+
+ console.log(jUser)
+
+
+  const sessionUser = await prisma.user.findFirst({
+    where: { email: jUser?.user?.email }
+  })
+
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
@@ -68,8 +83,8 @@ export default async function RootLayout({ children, params: { locale } }: {
         
       >
         
-
         <NextIntlClientProvider messages={messages}>
+          <EmailIsNotVerified session={sessionUser} />
         <AppProvider session>
           <Providers>
             
@@ -77,6 +92,7 @@ export default async function RootLayout({ children, params: { locale } }: {
         
         <PageTransition>
           {children}
+           <Toaster />
         <Analytics />
 
         </PageTransition>

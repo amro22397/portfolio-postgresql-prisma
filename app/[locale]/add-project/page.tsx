@@ -1,7 +1,7 @@
 
-import { useSession } from 'next-auth/react'
+// import { useSession } from 'next-auth/react'
 import ProjectForm from '@/components/ProjectForm'
-import Link from 'next/link';
+// import Link from 'next/link';
 import { getSession } from '@/actions/getUser';
 import BackToProjects from '@/components/BackToProjects';
 

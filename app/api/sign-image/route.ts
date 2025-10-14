@@ -14,5 +14,5 @@ export async function POST(request: Request) {
 import { NextRequest } from "next/server";
 
         export async function POST(request: NextRequest) {
-            console.log('red')
+            console.log(request)
         }

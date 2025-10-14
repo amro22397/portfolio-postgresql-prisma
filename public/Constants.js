@@ -15,11 +15,11 @@ import { SiShadcnui } from "react-icons/si";
 
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
-import { useTranslations } from 'next-intl';
-import { title } from 'process';
+// import { useTranslations } from 'next-intl';
+// import { title } from 'process';
 
 
-var dPast = 'June 1, 2024';
+var dPast = 'November 1, 2024';
 var d1 = new Date();
 var d2 = new Date(dPast);
 var dCalc = Math.abs((d1-d2)/31556952000);   // difference in milliseconds
@@ -275,9 +275,9 @@ export const about = {
       },
       {
         fieldName: "Experience",
-        fieldValue: diff + " Years",
+        fieldValue: diff === 1 ? diff + " Year" : diff + " Years",
         arFieldName: "الخبرة",
-        arFieldValue: diff === 1 ? diff + " سنة" : diff + " سنوات",
+        arFieldValue: diff === 1 || diff === 2 ? diff + " سنة" : diff + " سنوات",
       },
       {
         fieldName: "Nationality",

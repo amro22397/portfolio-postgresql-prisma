@@ -83,4 +83,6 @@ import { NextRequest } from "next/server";
 
         export async function POST(request: NextRequest) {
             console.log('red')
+            const body = await request.json();
+            console.log(body)
         }
