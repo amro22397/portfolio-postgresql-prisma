@@ -42,8 +42,8 @@ const Header = ({ email, locale }) => {
         <div className="w-full">
           {email && (
             <div
-              className="flex flex-row text-black dark:text-white mx-10 font-semibold
-            gap-4"
+              className="flex sm:flex-row flex-col text-black dark:text-white mx-10 font-semibold
+            gap-4 "
             >
               <p>{email}</p>
 
@@ -88,7 +88,7 @@ const Header = ({ email, locale }) => {
 
         {email && (
           <div
-            className="flex flex-row text-black dark:text-white justify-center mb-4 font-semibold
+            className="flex sm:flex-row flex-col text-black dark:text-white justify-center items-center mb-4 font-semibold
             gap-4 mx-auto"
           >
             <p>{email}</p>
