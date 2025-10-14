@@ -241,7 +241,7 @@ const ProjectFormForId = ({ projects, id, email}: {
 
 
   return (
-    <div className='max-w-[550px] max-sm:max-w-[425px]'>
+    <div className='max-w-[550px] max-sm:max-w-[95%]'>
       <form onSubmit={handleSubmitform} id="form"
       className='gap-4 flex flex-col '>
         <label className='flex flex-row justify-between'>
