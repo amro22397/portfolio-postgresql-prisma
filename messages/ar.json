@@ -4,7 +4,9 @@
     "Hello": "مرحبا أنا ...",
     "MyName": "عمرو المعتصم",
     "role": "مصمم مواقع إلكترونية الواجهة الكاملة",
-    "Download CV": "حمل السيرة الذاتية"
+    "Download CV": "حمل السيرة الذاتية",
+    "FrontendSkillSection": "الواجهة الأمامية >",
+    "BackendSkillSection": "الواجهة الخلفية >"
   },
 
   "StatsPage": {

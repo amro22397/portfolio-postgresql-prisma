@@ -1,5 +1,12 @@
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaWhatsapp } from 'react-icons/fa'
-import { SiJquery, SiPostgresql, SiPrisma } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { SiNodemon, SiPostgresql, SiPrisma } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
@@ -10,557 +17,590 @@ import { SiTypescript } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
 import { IoMdCloudUpload } from "react-icons/io";
 import { SiShadcnui } from "react-icons/si";
+import { SiMaterialformkdocs } from "react-icons/si";
 
-
-
-
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 // import { useTranslations } from 'next-intl';
 // import { title } from 'process';
 
-
-var dPast = 'November 1, 2024';
+var dPast = "November 1, 2024";
 var d1 = new Date();
 var d2 = new Date(dPast);
-var dCalc = Math.abs((d1-d2)/31556952000);   // difference in milliseconds
+var dCalc = Math.abs((d1 - d2) / 31556952000); // difference in milliseconds
 
-
-export var diff = Math.ceil(10 * dCalc)/10;
+export var diff = Math.ceil(10 * dCalc) / 10;
 
 export const links = [
-    {
-        name: "Home",
-        arName: "الصفحة الرئيسية",
-        path: "",
-    },
-    {
-        name: "Projects",
-        arName: "أعمال سابقة",
-        path: "/projects",
-    },
-    {
-        name: "Resume",
-        arName: "السيرة الذاتية",
-        path: "/resume",
-    },
-    {
-        name: "Contact",
-        arName: "تواصل معي",
-        path: "/contact",
-    },
-
-]
+  {
+    name: "Home",
+    arName: "الصفحة الرئيسية",
+    path: "",
+  },
+  {
+    name: "Projects",
+    arName: "أعمال سابقة",
+    path: "/projects",
+  },
+  {
+    name: "Resume",
+    arName: "السيرة الذاتية",
+    path: "/resume",
+  },
+  {
+    name: "Contact",
+    arName: "تواصل معي",
+    path: "/contact",
+  },
+];
 
 export const projects = [
-    {
-        id: 1,
-        title: "Real Estate Website",
-        description: "Full stack Real Estate website \
+  {
+    id: 1,
+    title: "Real Estate Website",
+    description:
+      "Full stack Real Estate website \
         to let users add houses and apartment ads for sale and rent \
         and admin can manage user inputs on the site.",
 
-        technologies: "Html, CSS, JavaScript, React, Tailwind, Node Js, Express, MongoDb ",
-        link: "",
-        date: "July-2024",
-        category: "Fullstack",
-        imageUrls: [
-            {
-                src: '/projects-image/realestate/1.png',
-                alt: 'image-1'
-            },
-            {
-                src: '/projects-image/realestate/2.png',
-                alt: 'image-1'
-            },
-            {
-                src: '/projects-image/realestate/3.png',
-                alt: 'image-3'
-            },
-            {
-                src: '/projects-image/realestate/4.png',
-                alt: 'image-4'
-            },
-            {
-                src: '/projects-image/realestate/5.png',
-                alt: 'image-5'
-            },
-            {
-                src: '/projects-image/realestate/6.png',
-                alt: 'image-6'
-            },
-            {
-                src: '/projects-image/realestate/7.png',
-                alt: 'image-7'
-            },
-            {
-                src: '/projects-image/realestate/8.png',
-                alt: 'image-8'
-            },
-            {
-                src: '/projects-image/realestate/9.png',
-                alt: 'image-9'
-            },
-            {
-                src: '/projects-image/realestate/10.png',
-                alt: 'image-10'
-            }
-        ] 
-    },
-    {
-        id: 2,
-        title: "Food Delivery Website",
-        description: "A website for a restaurant which help them to show their menu and let customers order online..",
-        technologies: "Html, CSS, JavaScript, React, Tailwind CSS",
-        link: "https://food-delivery-app-react-wheat.vercel.app/",
-        date: "2024-06-18",
-        category: "Frontend",
-        imageUrls: [
-            {
-                src: '/projects-image/food/1.png',
-                alt: 'image-1'
-            },
-            {
-                src: '/projects-image/food/2.png',
-                alt: 'image-2'
-            },
-        ]
-    },
-    {
-        id: 3,
-        title: "Youtube Clone",
-        description: "I made this project to allow myself to fetch data from a website API and display it on my website.. \
-        It helped me show skills in using React",
-        technologies: "Html, CSS, JavaScript, React, Tailwind CSS",
-        link: "https://youtube-clone-223997.vercel.app/",
-        date: "2024-06-14",
-        category: "Frontend",
-        imageUrls: [
-            {
-                src: '/projects-image/youtube/1.png',
-                alt: 'image-1'
-            },
-            {
-                src: '/projects-image/youtube/2.png',
-                alt: 'image-2'
-            },
-            {
-                src: '/projects-image/youtube/3.png',
-                alt: 'image-3'
-            },
-        ]
-    },
-    {
-        id: 4,
-        title: "Shoes Store Website",
-        description: " I made this website to let a brand show there products and let a customer order online...",
-        technologies: "Html, CSS, JavaScript, Tailwind CSS",
-        link: "",
-        date: "2024-06-07",
-        category: "Frontend",
-        imageUrls: [
-            
-            {
-                src: '/projects-image/shoes-store/image 1.png',
-                alt: 'image-1'
-            },
-            {
-                src: '/projects-image/shoes-store/image 2.png',
-                alt: 'image-2'
-            },
-            {
-                src: '/projects-image/shoes-store/image 3.png',
-                alt: 'image-3'
-            },
-            {
-                src: '/projects-image/shoes-store/2024-06-07 13_17_37-Night Mode for Windows (9j7g5d).png',
-                alt: 'image-aafdv'
-            },
-            {
-                src: '/projects-image/shoes-store/image 4.png',
-                alt: 'image-4'
-            },
-            {
-                src: '/projects-image/shoes-store/image 5.png',
-                alt: 'image-5'
-            },
-            {
-                src: '/projects-image/shoes-store/image 6.png',
-                alt: 'image-6'
-            },
-        ]
-    },
-    {
-      id: 5,
-      title: "Small Frontend Projects",
-      description: " There are many photos of small frontend projects...",
-      technologies: "Html, CSS, JavaScript, Tailwind CSS",
-      link: "",
-      date: "",
-      category: "Frontend",
-      imageUrls: [
-          {
-              src: '/projects-image/small-frontend-projects/1.png',
-              alt: 'image-1'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/2.png',
-              alt: 'image-2'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/3.png',
-              alt: 'image-3'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/4.png',
-              alt: 'image-4'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/5.png',
-              alt: 'image-5'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/6.png',
-              alt: 'image-6'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/7.png',
-              alt: 'image-7'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/8.png',
-              alt: 'image-8'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/9.png',
-              alt: 'image-9'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/10.png',
-              alt: 'image-10'
-          },
-          {
-              src: '/projects-image/small-frontend-projects/11.png',
-              alt: 'image-11'
-          },
-      ]
+    technologies:
+      "Html, CSS, JavaScript, React, Tailwind, Node Js, Express, MongoDb ",
+    link: "",
+    date: "July-2024",
+    category: "Fullstack",
+    imageUrls: [
+      {
+        src: "/projects-image/realestate/1.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/realestate/2.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/realestate/3.png",
+        alt: "image-3",
+      },
+      {
+        src: "/projects-image/realestate/4.png",
+        alt: "image-4",
+      },
+      {
+        src: "/projects-image/realestate/5.png",
+        alt: "image-5",
+      },
+      {
+        src: "/projects-image/realestate/6.png",
+        alt: "image-6",
+      },
+      {
+        src: "/projects-image/realestate/7.png",
+        alt: "image-7",
+      },
+      {
+        src: "/projects-image/realestate/8.png",
+        alt: "image-8",
+      },
+      {
+        src: "/projects-image/realestate/9.png",
+        alt: "image-9",
+      },
+      {
+        src: "/projects-image/realestate/10.png",
+        alt: "image-10",
+      },
+    ],
   },
-    
-]
+  {
+    id: 2,
+    title: "Food Delivery Website",
+    description:
+      "A website for a restaurant which help them to show their menu and let customers order online..",
+    technologies: "Html, CSS, JavaScript, React, Tailwind CSS",
+    link: "https://food-delivery-app-react-wheat.vercel.app/",
+    date: "2024-06-18",
+    category: "Frontend",
+    imageUrls: [
+      {
+        src: "/projects-image/food/1.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/food/2.png",
+        alt: "image-2",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Youtube Clone",
+    description:
+      "I made this project to allow myself to fetch data from a website API and display it on my website.. \
+        It helped me show skills in using React",
+    technologies: "Html, CSS, JavaScript, React, Tailwind CSS",
+    link: "https://youtube-clone-223997.vercel.app/",
+    date: "2024-06-14",
+    category: "Frontend",
+    imageUrls: [
+      {
+        src: "/projects-image/youtube/1.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/youtube/2.png",
+        alt: "image-2",
+      },
+      {
+        src: "/projects-image/youtube/3.png",
+        alt: "image-3",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Shoes Store Website",
+    description:
+      " I made this website to let a brand show there products and let a customer order online...",
+    technologies: "Html, CSS, JavaScript, Tailwind CSS",
+    link: "",
+    date: "2024-06-07",
+    category: "Frontend",
+    imageUrls: [
+      {
+        src: "/projects-image/shoes-store/image 1.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/shoes-store/image 2.png",
+        alt: "image-2",
+      },
+      {
+        src: "/projects-image/shoes-store/image 3.png",
+        alt: "image-3",
+      },
+      {
+        src: "/projects-image/shoes-store/2024-06-07 13_17_37-Night Mode for Windows (9j7g5d).png",
+        alt: "image-aafdv",
+      },
+      {
+        src: "/projects-image/shoes-store/image 4.png",
+        alt: "image-4",
+      },
+      {
+        src: "/projects-image/shoes-store/image 5.png",
+        alt: "image-5",
+      },
+      {
+        src: "/projects-image/shoes-store/image 6.png",
+        alt: "image-6",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Small Frontend Projects",
+    description: " There are many photos of small frontend projects...",
+    technologies: "Html, CSS, JavaScript, Tailwind CSS",
+    link: "",
+    date: "",
+    category: "Frontend",
+    imageUrls: [
+      {
+        src: "/projects-image/small-frontend-projects/1.png",
+        alt: "image-1",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/2.png",
+        alt: "image-2",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/3.png",
+        alt: "image-3",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/4.png",
+        alt: "image-4",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/5.png",
+        alt: "image-5",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/6.png",
+        alt: "image-6",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/7.png",
+        alt: "image-7",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/8.png",
+        alt: "image-8",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/9.png",
+        alt: "image-9",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/10.png",
+        alt: "image-10",
+      },
+      {
+        src: "/projects-image/small-frontend-projects/11.png",
+        alt: "image-11",
+      },
+    ],
+  },
+];
 
 export const about = {
-    title: "About me",
-    arTitle: "نبذة عني",
-    descripiton: 'I am a Full Stack Web Developer. I can design the frontend and the backend of the website. Also, I can use many tools and libraries to make the page looks good and responsive.',
-    aeDescripiton: "أنا مصمم ومطور مواقع إلكترونية الواجهة الكاملة. أستطيع تصميم الواجهة الأمامية والواجهة الخلفية من الموقع. أيضا أستطيع إستخدام العديد من الأدوات والمكتبات لجعل الصفحات جيدة ومتجاوبة . ",
-    info: [
-      {
-        fieldName: "Name",
-        fieldValue: "Amro El-Mutasim",
-        arFieldName: "الإسم",
-        arFieldValue: "عمرو المعتصم"
-      },
-      {
-        fieldName: "Phone Number",
-        fieldValue: "+96879335801",
-        arFieldName: "رقم الهاتف",
-        arFieldValue: "+96879335801",
-        // dir: "ltr",
-        // arDir: "ltr",
-      },
-      {
-        fieldName: "Whatsapp Number",
-        fieldValue: "+96879335801",
-        arFieldName: "رقم الواتساب",
-        arFieldValue: "+96879335801"
-      },
-      {
-        fieldName: "Experience",
-        fieldValue: diff === 1 ? diff + " Year" : diff + " Years",
-        arFieldName: "الخبرة",
-        arFieldValue: diff === 1 || diff === 2 ? diff + " سنة" : diff + " سنوات",
-      },
-      {
-        fieldName: "Nationality",
-        fieldValue: "Sudanese",
-        arFieldName: "الجنسية",
-        arFieldValue: "سوداني"
-      },
-      {
-        fieldName: "Religon",
-        fieldValue: "Islam",
-        arFieldName: "الديانة",
-        arFieldValue: "الإسلام"
-      },
-      {
-        fieldName: "Email",
-        fieldValue: "amroalmutasim22@gmail.com",
-        arFieldName: "البريد الإلكتروني",
-        arFieldValue: "amroalmutasim22@gmail.com"
-      },
-      {
-        fieldName: "Freelance",
-        fieldValue: "Available",
-        arFieldName: "العمل الحر",
-        arFieldValue: "متوفر"
-      },
-  
-      {
-        fieldName: "Languages",
-        fieldValue: "Arabic, English",
-        arFieldName: "اللغات",
-        arFieldValue: "العربية , الإنجليزية"
-      },
-    ] 
-  }
-  
-  export const experience = {
-      icon: '',
-      title: 'My Experience',
-      arTitle: 'الخبرة العملية',
-      descripiton: '',
-      arDescripiton: '',
-      items: [
-        {
-          company: "amro97 Academy",
-          position: "Founding developer at a startup",
-          duration: "FEB 2025 - Present",
-          link: 'https://www.amro97-academy.com/',
-          desc: 'I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.'
-        }
-      ]
-    }
+  title: "About me",
+  arTitle: "نبذة عني",
+  descripiton:
+    "I am a Full Stack Web Developer. I can design the frontend and the backend of the website. Also, I can use many tools and libraries to make the page looks good and responsive.",
+  aeDescripiton:
+    "أنا مصمم ومطور مواقع إلكترونية الواجهة الكاملة. أستطيع تصميم الواجهة الأمامية والواجهة الخلفية من الموقع. أيضا أستطيع إستخدام العديد من الأدوات والمكتبات لجعل الصفحات جيدة ومتجاوبة . ",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Amro El-Mutasim",
+      arFieldName: "الإسم",
+      arFieldValue: "عمرو المعتصم",
+    },
+    {
+      fieldName: "Phone Number",
+      fieldValue: "+96879335801",
+      arFieldName: "رقم الهاتف",
+      arFieldValue: "+96879335801",
+      // dir: "ltr",
+      // arDir: "ltr",
+    },
+    {
+      fieldName: "Whatsapp Number",
+      fieldValue: "+96879335801",
+      arFieldName: "رقم الواتساب",
+      arFieldValue: "+96879335801",
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: diff === 1 ? diff + " Year" : diff + " Years",
+      arFieldName: "الخبرة",
+      arFieldValue: diff === 1 || diff === 2 ? diff + " سنة" : diff + " سنوات",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Sudanese",
+      arFieldName: "الجنسية",
+      arFieldValue: "سوداني",
+    },
+    {
+      fieldName: "Religon",
+      fieldValue: "Islam",
+      arFieldName: "الديانة",
+      arFieldValue: "الإسلام",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "amroalmutasim22@gmail.com",
+      arFieldName: "البريد الإلكتروني",
+      arFieldValue: "amroalmutasim22@gmail.com",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
+      arFieldName: "العمل الحر",
+      arFieldValue: "متوفر",
+    },
 
+    {
+      fieldName: "Languages",
+      fieldValue: "Arabic, English",
+      arFieldName: "اللغات",
+      arFieldValue: "العربية , الإنجليزية",
+    },
+  ],
+};
 
-    export const realProjectsExperience = {
-      icon: '',
-      title: 'Real Projects Experience',
-      arTitle: 'خبرة المشاريع الحقيقية',
-      descripiton: 'These are projects which i made by myself or made most of them by my coding and problem solving skills',
-      arDescripiton: 'هذه مشاريع صممتها بنفسي أو قمت بتصميم معظمها عن طريق مهاراتي في البرمجة وحل المشكلات',
-      items: [
-        {
-          project: "amro97 Academy",
-          duration: "FEB 2025",
-          link: 'https://www.amro97-academy.com/',
-          desc: 'I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.',
-          features: ["Projects lists and youtube videos", "Dark mode", "Multi-language by next-intl", "Full Authentication"]
-        },
+export const experience = {
+  icon: "",
+  title: "My Experience",
+  arTitle: "الخبرة العملية",
+  descripiton: "",
+  arDescripiton: "",
+  items: [
+    {
+      company: "amro97 Academy",
+      position: "Founding developer at a startup",
+      duration: "FEB 2025 - Present",
+      link: "https://www.amro97-academy.com/",
+      desc: "I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.",
+    },
+  ],
+};
 
-        {
-          project: "Todo App",
-          duration: "JAN 2025",
-          link: 'https://todo-fullstack-nextjs15.vercel.app/to-dos',
-          desc: "I made this app for real use by myself to store different things that I want to do while I'm developing, firstly I followed a tutorial and after that i added others features like the sidebar and others and I think how to code them by myself",
-          features: ["Sidebar to select tasklists", "Dark mode", "Fullstack", "Full Authentication"]
-        },
-
-        {
-          project: "My Portfolio",
-          duration: "SEP 2024",
-          link: 'https://amro97-portfolio.vercel.app/',
-          desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete them, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
-          features: ["Dark mode", "Multi-language by next-intl", "Fullstack"]
-        },
-
-        {
-          project: "Web Dev Service",
-          duration: "JAN 2025",
-          link: 'https://www.wds-oman.com/',
-          desc: 'I made this freelance website to let people request me building websites for them as a freelancer.',
-          features: ["Dark mode", "Multi-language by next-intl"]
-        },
-      ]
-    }
-  
-    export const education = {
-      title: "My Education",
-      arTitle: "التعليم",
-      descripiton: "",
-      arDescripiton: "",
-      items: [
-        {
-          duration: "MAR 2024",
-          degree: "Responsive Web Design Certification",
-          institution: "Free Code Camp Website",
-          certificateDownload: "/certificates/Web Development/Responsive Web Design Certification.png",
-        },
-
-        {
-          duration: "NOV 2022",
-          degree: "IELTS certificate",
-          institution: "British Council",
-          certificateDownload: "/certificates/IELTS Certificate_compressed.pdf",
-        },
-
-        {
-          duration: "May 2023",
-          degree: "General Record Exam - GRE",
-          institution: "ETS",
-          certificateDownload: "/certificates/GRE Report.pdf",
-          
-        },
-
-        {
-          duration: "April 2014",
-          degree: "High School Certification",
-          institution: "Ministry Of Education - Sudan",
-          certificateDownload: "/certificates/High School Arabic Certification.pdf",
-          englishTranslation: "/certificates/High School Translated Certificate.pdf",
-        },
-  
-        // {
-        //   duration: "MAR 2024",
-        //   degree: "BIM Fundamentals Certification (Building Information Modeling) - Structure Design",
-        //   institution: "Coursera Website - University Of Taiwan",
-        //   certificateDownload: "/certificates/BIM Fundamentals by Coursera.pdf",
-        // },
-  
-        // {
-        //   duration: "FEB 2024",
-        //   degree: "Learning AutoCAD 2024",
-        //   institution: "LinkedIn Learning",
-        //   certificateDownload: "/certificates/Learning AutoCAD 2024.pdf",
-        // },
-  
-        // {
-        //   duration: "FEB 2024",
-        //   degree: "Learning Revit 2024",
-        //   institution: "LinkedIn Learning",
-        //   certificateDownload: "/certificates/Learning Revit 2024.pdf",
-        // },
-
-        // {
-        //   duration: "NOV 2014 - DEC 2021",
-        //   degree: "Bachelor of Science (B.S.) in Civil Engineering",
-        //   institution: "University Of Khartoum, Sudan",
-        //   certificateDownload: "/certificates/University Certificate Details.pdf",
-        // },
-
+export const realProjectsExperience = {
+  icon: "",
+  title: "Real Projects Experience",
+  arTitle: "خبرة المشاريع الحقيقية",
+  descripiton:
+    "These are projects which i made by myself or made most of them by my coding and problem solving skills",
+  arDescripiton:
+    "هذه مشاريع صممتها بنفسي أو قمت بتصميم معظمها عن طريق مهاراتي في البرمجة وحل المشكلات",
+  items: [
+    {
+      project: "amro97 Academy",
+      duration: "FEB 2025",
+      link: "https://www.amro97-academy.com/",
+      desc: "I made this academy to help people learn and apply from coding youtube projects and give them the full roadmap and guidance to become developers.",
+      features: [
+        "Projects lists and youtube videos",
+        "Dark mode",
+        "Multi-language by next-intl",
+        "Full Authentication",
       ],
-    }
-    
-  ;
-  export const skills = {
-    title: "My Skills",
-    arTitle: "المهارات",
-    descripiton: 
+    },
+
+    {
+      project: "Todo App",
+      duration: "JAN 2025",
+      link: "https://todo-fullstack-nextjs15.vercel.app/to-dos",
+      desc: "I made this app for real use by myself to store different things that I want to do while I'm developing, and i added others features like the  sidebar and others and I think how to code them by myself",
+      features: [
+        "Sidebar to select tasklists",
+        "Dark mode",
+        "Fullstack",
+        "Full Authentication",
+      ],
+    },
+
+    {
+      project: "My Portfolio",
+      duration: "SEP 2024",
+      link: "https://amro97-portfolio.vercel.app/",
+      desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete them, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
+      features: ["Dark mode", "Multi-language by next-intl", "Fullstack"],
+    },
+
+    {
+      project: "Web Dev Service",
+      duration: "JAN 2025",
+      link: "https://www.wds-oman.com/",
+      desc: "I made this freelance website to let people request me building websites for them as a freelancer.",
+      features: ["Dark mode", "Multi-language by next-intl"],
+    },
+  ],
+};
+
+export const education = {
+  title: "My Education",
+  arTitle: "التعليم",
+  descripiton: "",
+  arDescripiton: "",
+  items: [
+    {
+      duration: "MAR 2024",
+      degree: "Responsive Web Design Certification",
+      institution: "Free Code Camp Website",
+      certificateDownload:
+        "/certificates/Web Development/Responsive Web Design Certification.png",
+    },
+
+    {
+      duration: "NOV 2022",
+      degree: "IELTS certificate",
+      institution: "British Council",
+      certificateDownload: "/certificates/IELTS Certificate_compressed.pdf",
+    },
+
+    {
+      duration: "May 2023",
+      degree: "General Record Exam - GRE",
+      institution: "ETS",
+      certificateDownload: "/certificates/GRE Report.pdf",
+    },
+
+    {
+      duration: "April 2014",
+      degree: "High School Certification",
+      institution: "Ministry Of Education - Sudan",
+      certificateDownload: "/certificates/High School Arabic Certification.pdf",
+      englishTranslation:
+        "/certificates/High School Translated Certificate.pdf",
+    },
+
+    // {
+    //   duration: "MAR 2024",
+    //   degree: "BIM Fundamentals Certification (Building Information Modeling) - Structure Design",
+    //   institution: "Coursera Website - University Of Taiwan",
+    //   certificateDownload: "/certificates/BIM Fundamentals by Coursera.pdf",
+    // },
+
+    // {
+    //   duration: "FEB 2024",
+    //   degree: "Learning AutoCAD 2024",
+    //   institution: "LinkedIn Learning",
+    //   certificateDownload: "/certificates/Learning AutoCAD 2024.pdf",
+    // },
+
+    // {
+    //   duration: "FEB 2024",
+    //   degree: "Learning Revit 2024",
+    //   institution: "LinkedIn Learning",
+    //   certificateDownload: "/certificates/Learning Revit 2024.pdf",
+    // },
+
+    // {
+    //   duration: "NOV 2014 - DEC 2021",
+    //   degree: "Bachelor of Science (B.S.) in Civil Engineering",
+    //   institution: "University Of Khartoum, Sudan",
+    //   certificateDownload: "/certificates/University Certificate Details.pdf",
+    // },
+  ],
+};
+export const skills = {
+  title: "My Skills",
+  arTitle: "المهارات",
+  descripiton:
     "I have many skills and able to use many tools and libraries that I will list below",
-    arDescripiton: "لدي العديد من المهارات واستطيع استعمال مختلف الادوات والمكتبات المذكورة بالأسفل",
-    skillList: [
+  arDescripiton:
+    "لدي العديد من المهارات واستطيع استعمال مختلف الادوات والمكتبات المذكورة بالأسفل",
+  skillList: {
+    frontendSkills: [
       {
         icon: <FaHtml5 />,
-        name: "HTML"
+        name: "HTML",
       },
       {
         icon: <FaCss3 />,
-        name: "CSS"
+        name: "CSS",
       },
       {
         icon: <FaJs />,
-        name: "JavaScript"
-      },
-  
-      {
-        icon: <SiTailwindcss />,
-        name: "Tailwind CSS"
-      },
-  
-      {
-        icon: <FaReact />,
-        name: "React"
-      },
-      {
-        icon: <SiTypescript />,
-        name: "TypeScript"
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "Next.js"
-      },
-      {
-        icon: <SiShadcnui />,
-        name: "Shadcn"
-      },
-      
-      {
-        icon: <SiJquery />,
-        name: "Jquery"
-      },
-      {
-        icon: <FaNodeJs />,
-        name: "Node Js"
-      },
-      {
-        icon: <SiExpress />,
-        name: "Express"
-      },
-      {
-        icon: <SiReactquery />,
-        name: "ReactQuery"
+        name: "JavaScript",
       },
 
       {
-        icon: <SiMongodb />,
-        name: "MongoDB"
+        icon: <SiTailwindcss />,
+        name: "Tailwind CSS",
+      },
+
+      {
+        icon: <FaReact />,
+        name: "React",
+      },
+      {
+        icon: <SiTypescript />,
+        name: "TypeScript",
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "Next.js",
+      },
+
+      {
+        icon: <SiShadcnui />,
+        name: "Shadcn",
+      },
+
+      {
+        icon: <SiMaterialformkdocs />,
+        name: "Material UI",
+      },
+
+      // {
+      //   icon: <SiJquery />,
+      //   name: "Jquery",
+      // },
+
+      {
+        icon: <FaGitAlt />,
+        name: "Git",
+      },
+
+      {
+        icon: <SiGithub />,
+        name: "Github",
+      },
+
+      {
+        icon: <IoMdCloudUpload />,
+        name: "Uploadthing",
+      },
+      {
+        icon: <RiFirebaseFill />,
+        name: "Firebase",
+      },
+
+      {
+        icon: <SiNodemon />,
+        name: "Nodemailer",
+      },
+    
+    ],
+
+    backendSkills: [
+      {
+        icon: <SiPostgresql />,
+        name: "PostgreSQL",
       },
 
       {
         icon: <SiPrisma />,
-        name: "Prisma"
+        name: "Prisma",
       },
 
       {
-        icon: <SiPostgresql />,
-        name: "PostgreSQL"
+        icon: <SiMongodb />,
+        name: "MongoDB",
       },
 
       {
-        icon: <FaGitAlt />,
-        name: "Git"
+        icon: <FaNodeJs />,
+        name: "Node Js",
       },
       {
-        icon: <SiGithub />,
-        name: "Github"
+        icon: <SiExpress />,
+        name: "Express",
       },
       {
-        icon: <IoMdCloudUpload />,
-        name: "Uploadthing"
+        icon: <SiReactquery />,
+        name: "ReactQuery",
       },
-      {
-        icon: <RiFirebaseFill />,
-        name: "Firebase"
-      },
-      
-    ]
-  };
+    ],
+  },
+};
 
-  export const info = [
-    {
-      icon: <FaPhoneAlt />,
-      title: "Phone number",
-      description: "+96879335801",
-      arTitle: "رقم الهاتف",
-      arDescription: "+96879335801"
-    },
-    {
-      icon: <FaWhatsapp />,
-      title: "Whatsapp number",
-      link: "http://wa.me/+96879335801",
-      arTitle: "رقم الواتساب",
-      arLink: "http://wa.me/+96879335801",
-    },
-    {
-      icon: <FaEnvelope />,
-      title: "Email",
-      description: "amroalmutasim22@gmail.com",
-      arTitle: "البريد الإلكتروني",
-      arDescription: "amroalmutasim22@gmail.com"
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: "Address",
-      description: "Alshifa Street, AlMawalih South, Oman",
-      arTitle: "العنوان",
-      arDescription: "شارع الشفاء, الموالح الجنوبية, سلطنة عمان"
-    },
-  ];
+export const skillList = [
+  ...skills.skillList.frontendSkills,
+  ...skills.skillList.backendSkills,
+];
+
+export const info = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone number",
+    description: "+96879335801",
+    arTitle: "رقم الهاتف",
+    arDescription: "+96879335801",
+  },
+  {
+    icon: <FaWhatsapp />,
+    title: "Whatsapp number",
+    link: "http://wa.me/+96879335801",
+    arTitle: "رقم الواتساب",
+    arLink: "http://wa.me/+96879335801",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "amroalmutasim22@gmail.com",
+    arTitle: "البريد الإلكتروني",
+    arDescription: "amroalmutasim22@gmail.com",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description: "Alshifa Street, AlMawalih South, Oman",
+    arTitle: "العنوان",
+    arDescription: "شارع الشفاء, الموالح الجنوبية, سلطنة عمان",
+  },
+];

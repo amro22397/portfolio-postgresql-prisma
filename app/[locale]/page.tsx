@@ -30,6 +30,7 @@ import { getLocale, getTranslations } from 'next-intl/server'
 import prisma from '@/lib/prisma'
 import { getUser } from '@/actions/getUser'
 import { redirect } from 'next/navigation'
+import SkillsSections from '@/components/SkillsSections'
 
 
 
@@ -89,27 +90,16 @@ const page = async () => {
             max-xl:text-center ${locale === 'ar' && 'mx-2'}`}>{homePage('role')}</span>
 
             <div className="mt-2 max-sm:mt-4">
-              <div className={`grid md:grid-cols-8 lg:grid-cols-11 xl:grid-cols-5 2xl:grid-cols-7 lg:gap-y-8 
-               grid-cols-3 gap-2 xl:gap-y-4 text-4xl
-              text-gray-800 mb-8 gap-y-4`} >
-              {skills.skillList.map((skill, index) => (
-                <div key={index}
-                className={`flex flex-col items-center
-                hover:transform hover:scale-105 hover:text-gray-900
-                dark:text-slate-100 dark:hover:text-slate-200 w-full
-                gap-1`}>
 
-                <span className="">{skill.icon}</span>
-                <span className={`text-sm font-semibold
-                text-black dark:text-white text-center flex items-center justify-center
-                text-[15px] ${locale === 'ar' && 'text-[16px]'}`}
-                style={{fontFamily: "Arial, Helvetica, sans-serif"}}>{skill.name}</span>
 
-                </div>
+              <div className="flex flex-col">
+                
+              <SkillsSections title={homePage('FrontendSkillSection')} skillsArray={skills.skillList.frontendSkills} />
 
-              ))}
-              </div>
-            
+              <SkillsSections title={homePage('BackendSkillSection')} skillsArray={skills.skillList.backendSkills} />
+
+
+                </div>          
 
             <div className="flex flex-col xl:items-start justify-center gap-6 mt-2
             items-center">    

@@ -3,7 +3,7 @@
 import React from 'react'
 import CountUp from 'react-countup'
 
-import { projects } from '../public/Constants'
+import { projects, skillList } from '../public/Constants'
 import { about, experience, education, skills } from '../public/Constants'
 import { diff } from '../public/Constants'
 import { useTranslations } from 'next-intl'
@@ -26,7 +26,7 @@ const Stats = ({allProjects}) => {
         },
     
         {
-            num: skills.skillList.length,
+            num: skillList.length,
             text: statsPage('Technologies mastered'),
         },
     

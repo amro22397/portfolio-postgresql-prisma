@@ -17,6 +17,7 @@ import {
   education,
   skills,
   realProjectsExperience,
+  skillList,
 } from "../../../public/Constants";
 
 import {
@@ -405,7 +406,7 @@ const page = () => {
               lg:grid-cols-5 xl:grid-cols-4
               xl:gap-[30px] mb-20 left-to-right"
                 >
-                  {skills.skillList.map((skill, index) => {
+                  {skillList.map((skill, index) => {
                     return (
                       <li key={index} className="left-to-right">
                         <TooltipProvider

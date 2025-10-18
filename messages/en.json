@@ -4,7 +4,9 @@
     "Hello": "Hello I am ...",
     "MyName": "Amro El-Mutasim",
     "role": "Full Stack Developer",
-    "Download CV": "Download CV"
+    "Download CV": "Download CV",
+    "FrontendSkillSection": "Frontend >",
+    "BackendSkillSection": "Backend >"
   },
 
   "StatsPage": {
