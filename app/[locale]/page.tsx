@@ -113,7 +113,7 @@ const page = async () => {
                active:scale-95 py-6 rounded-full
               text-white ${locale === 'ar' ? 'text-md' : 'text-md font-semibold'}`}
               >
-                <Link href="/resume.pdf" target='_blank'>{homePage('Download CV')}</Link>
+                <Link href="/RESUME 18-OCT-2025 (Web Developer).pdf" target='_blank'>{homePage('Download CV')}</Link>
                 <FiDownload className='text-xl' />
               </Button>
                         

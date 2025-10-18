@@ -18,6 +18,10 @@ import { RiFirebaseFill } from "react-icons/ri";
 import { IoMdCloudUpload } from "react-icons/io";
 import { SiShadcnui } from "react-icons/si";
 import { SiMaterialformkdocs } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
+import { FaWpforms } from "react-icons/fa";
+
+
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 // import { useTranslations } from 'next-intl';
@@ -560,6 +564,16 @@ export const skills = {
       {
         icon: <SiNodemon />,
         name: "Nodemailer",
+      },
+
+      {
+        icon: <MdEmail />,
+        name: "React Email",
+      },
+
+      {
+        icon: <FaWpforms />,
+        name: "Web3Forms",
       },
     
     ],
