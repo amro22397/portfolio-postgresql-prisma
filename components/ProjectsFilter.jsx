@@ -85,7 +85,7 @@ max-sm:grid-cols-1 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2">
         <Link key={index} href={`/${locale}/projects/${project.id}`}
         className=''>
          <div key={index} className="flex flex-col justify-start items-center
-        bg-[#232329]/90 dark:bg-stone-700 gap-3 shadow-lg mb-3 transform hover:scale-[1.01] transition-all duration-300 ease-in-out
+        bg-gray-700/95 dark:bg-stone-700 gap-3 shadow-lg mb-3 transform hover:scale-[1.01] transition-all duration-300 ease-in-out
         cursor-pointer h-[460px] max-w-[370px] mx-auto
         max-sm:max-w-full relative" id="project-card">
             

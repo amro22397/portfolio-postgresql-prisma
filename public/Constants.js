@@ -370,7 +370,7 @@ export const realProjectsExperience = {
     {
       project: "Todo App",
       duration: "JAN 2025",
-      link: "https://todo-fullstack-nextjs15.vercel.app/to-dos",
+      link: "https://todo-fullstack-postgresql-prisma.vercel.app/to-dos",
       desc: "I made this app for real use by myself to store different things that I want to do while I'm developing and i added others features like the tasklist in the sidebar and others and I think how to code them by myself",
       features: [
         "Sidebar to select tasklists",
@@ -408,7 +408,7 @@ export const realProjectsExperience = {
     {
       project: "My Portfolio",
       duration: "SEP 2024",
-      link: "https://amro97-portfolio.vercel.app/",
+      link: "https://www.amro97-portfolio.xyz/en",
       desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete them, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
       features: ["Dark mode", "Multi-language by next-intl", "Fullstack"],
     },
