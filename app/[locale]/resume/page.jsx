@@ -155,11 +155,12 @@ const page = () => {
                           <li
                             key={index}
                             className="bg-[#232329]/90
-                      dark:bg-neutral-700 py-6 md:px-10 px-4 rounded-xl
+                      dark:bg-neutral-700 py-6 md:px-10 rounded-xl
                       flex flex-col justify-center items-center lg:items-start gap-1 w-full"
+                      //  px-4
                           >
                             <div className="flex flex-row justify-between items-center w-full
-                            md:mb-0 mb-1">
+                            md:mb-0 mb-1 max-md:px-4">
                               <p className="text-white/80 md:text-lg">
                                 {item.company}
                               </p>
@@ -177,7 +178,7 @@ const page = () => {
                               {item.position}
                             </h3>
 
-                            <p className="text-white/60">{item.desc}</p>
+                            <p className="text-white/60 max-md:px-3">{item.desc}</p>
 
                             {item?.link && (
                               <Link
@@ -234,12 +235,13 @@ const page = () => {
                           <li
                             key={index}
                             className="bg-[#232329]/90
-                      dark:bg-neutral-700 py-6 px-10 rounded-xl
+                      dark:bg-neutral-700 py-6 md:px-10 rounded-xl
                       flex flex-col justify-center items-center lg:items-start gap-1 w-full"
                           >
                             <div className="flex flex-row justify-between items-center w-full">
                               {/* <p className="text-white/60 text-lg">{item.project}</p> */}
-                              <span className="text-white">
+
+                              <span className="text-white px-4">
                                 {item.duration}
                               </span>
                             </div>
@@ -251,13 +253,16 @@ const page = () => {
                               {item.project}
                             </h3>
 
-                            <p className="text-white/60">{item.desc}</p>
+                            <p className="text-white/60 max-md:px-3">{item.desc}</p>
 
                             <div
                               className="flex flex-wrap gap-4 justify-start mx-6 items-center w-full
                               mt-2 -mb-1"
                             >
-                              {item?.features &&
+                              
+                              <div className="flex flex-wrap items-center justify-center gap-y-3 gap-x-4">
+
+                                {item?.features &&
                                 item?.features.map((feature, index) => {
                                   return (
                                     <span
@@ -268,6 +273,8 @@ const page = () => {
                                     </span>
                                   );
                                 })}
+
+                              </div>
 
                               
                             </div>

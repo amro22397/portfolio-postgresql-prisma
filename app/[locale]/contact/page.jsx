@@ -109,7 +109,7 @@ const handleChange = () => {
             ${pathName.includes('ar') ? 'xl:max-w-[675px]' : ''}`}>
 
             <form onSubmit={handleSubmit}
-            className="flex flex-col gap-6 p-10 bg-[#27272c] dark:bg-[#414149] sm:rounded-xl rounded-none">
+            className="flex flex-col gap-6 py-10 md:px-10 px-[10px] bg-[#27272c] dark:bg-[#414149] sm:rounded-xl rounded-none">
               <h3 className={`text-4xl text-orange-400 
                 ${pathName.includes('ar') ? 'text-2xl' : ''}`}>{contactPage('WorkTogether')}</h3>
               <p className={`text-white/60 ${pathName.includes('ar') ? 'text-md' : ''}`}>
