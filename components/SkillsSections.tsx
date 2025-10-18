@@ -11,10 +11,11 @@ const SkillsSections = ({ title, skillsArray }: {
 
     const locale = useLocale();
   return (
-    <section className="flex flex-col items-start justify-center w-full">
+    <section className="flex flex-col items-start justify-center w-full
+    max-md:items-center">
 
                 <div className={`text-white text-left mb-[11.70px] font-sans font-semibold
-                text-[16.5px] tracking-wider 
+                text-[16.5px] tracking-wider max-md:mb-5 
                 ${title === "Frontend >" ? "bg-blue-500" : "bg-yellow-600"}
                 ${locale === "ar" ? "py-[0.65px] px-3" : "py-[0.2px] px-2"}`}
                 
@@ -24,7 +25,7 @@ const SkillsSections = ({ title, skillsArray }: {
 
                 <div className={`grid md:grid-cols-8 lg:grid-cols-11 xl:grid-cols-5 2xl:grid-cols-7 lg:gap-y-8 
                grid-cols-3 gap-2 xl:gap-y-4 text-4xl
-              text-gray-800 mb-8 gap-y-4`} >
+              text-gray-800 mb-8 gap-y-4 w-full `} >
               {skillsArray.map((skill: any, index: number) => (
                 <div key={index}
                 className={`flex flex-col items-center
