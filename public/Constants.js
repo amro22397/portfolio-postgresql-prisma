@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaWhatsapp } from 'react-icons/fa'
-import { SiJquery } from "react-icons/si";
+import { SiJquery, SiPostgresql, SiPrisma } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
@@ -498,10 +498,22 @@ export const about = {
         icon: <SiReactquery />,
         name: "ReactQuery"
       },
+
       {
         icon: <SiMongodb />,
         name: "MongoDB"
       },
+
+      {
+        icon: <SiPrisma />,
+        name: "Prisma"
+      },
+
+      {
+        icon: <SiPostgresql />,
+        name: "PostgreSQL"
+      },
+
       {
         icon: <FaGitAlt />,
         name: "Git"

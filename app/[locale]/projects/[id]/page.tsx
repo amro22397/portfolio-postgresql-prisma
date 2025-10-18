@@ -10,8 +10,8 @@ import "swiper/css"; */
 import { getSession } from '@/actions/getUser';
 // import { headers } from "next/headers";
 import ProjectById from './ProjectById';
-import { Project } from '@/models/project';
-import mongoose from 'mongoose';
+// import { Project } from '@/models/project';
+// import mongoose from 'mongoose';
 import { getLocale } from 'next-intl/server';
 import prisma from '@/lib/prisma';
 
