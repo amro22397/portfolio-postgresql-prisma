@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 
 const ProjectsFilter = ({allProjects, frontEndProjects, fullStackProjects, email, locale}) => {
 
-const [projects, setProjects] = useState(fullStackProjects);
+const [projects, setProjects] = useState(JSON.parse(localStorage.getItem('projects')) || fullStackProjects);
 
 console.log(projects)
 
@@ -57,19 +57,28 @@ console.log(projects)
 
 <div className="flex flex-row gap-5">
 <div id="filter-key"
-onClick={() => setProjects(allProjects)}>
+onClick={() => {
+    setProjects(allProjects);
+    localStorage.setItem('projects', JSON.stringify(allProjects))
+}}>
     {projectsPage('All')}
 </div>
 
 <div id="filter-key"
 style={{fontFamily: "Arial, Helvetica, sans-serif"}}
-onClick={() => setProjects(fullStackProjects)}>
+onClick={() => {
+    setProjects(fullStackProjects)
+    localStorage.setItem('projects', JSON.stringify(fullStackProjects))
+}}>
     {projectsPage('Fullstack')}
 </div>
 
 <div id="filter-key"
 style={{fontFamily: "Arial, Helvetica, sans-serif"}}
- onClick={() => setProjects(frontEndProjects)}>
+ onClick={() => {
+    setProjects(frontEndProjects)
+    localStorage.setItem('projects', JSON.stringify(frontEndProjects))
+ }}>
     {projectsPage('Frontend')}
 </div>
 </div>
