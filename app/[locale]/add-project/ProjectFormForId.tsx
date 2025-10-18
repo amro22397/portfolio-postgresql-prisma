@@ -8,7 +8,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { UploadButton } from "@/utils/uploadthing";
 
 // import { useSession } from 'next-auth/react'
-import { skills } from '@/public/Constants';
+import { skillList, skills } from '@/public/Constants';
 
 
 
@@ -275,7 +275,7 @@ const ProjectFormForId = ({ projects, id, email}: {
 
              {/* new technologies input */}
             <div className="flex flex-wrap gap-4 mx-0 ">
-            {skills.skillList.map(skill => (
+            {skillList.map(skill => (
 
               <label 
               key={skill.name}

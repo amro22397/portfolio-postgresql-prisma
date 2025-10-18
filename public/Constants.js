@@ -360,13 +360,46 @@ export const realProjectsExperience = {
     },
 
     {
+      project: "Web Dev Service",
+      duration: "JAN 2025",
+      link: "https://www.wds-oman.com/",
+      desc: "I made this freelance website to let people request me building websites for them as a freelancer.",
+      features: ["Dark mode", "Multi-language by next-intl"],
+    },
+
+    {
       project: "Todo App",
       duration: "JAN 2025",
       link: "https://todo-fullstack-nextjs15.vercel.app/to-dos",
-      desc: "I made this app for real use by myself to store different things that I want to do while I'm developing, and i added others features like the  sidebar and others and I think how to code them by myself",
+      desc: "I made this app for real use by myself to store different things that I want to do while I'm developing and i added others features like the tasklist in the sidebar and others and I think how to code them by myself",
       features: [
         "Sidebar to select tasklists",
         "Dark mode",
+        "Fullstack",
+        "Full Authentication",
+      ],
+    },
+
+    {
+      project: "Notes App",
+      duration: "MARCH 2025",
+      link: "https://notes-app-postgresql-prisma-rpjw.vercel.app/en",
+      desc: "I made this app to be like iphone notes app where i can add notes which i want to see them while using the browser, and there are features like iphone note app such as pin notes and lock notes.",
+      features: [
+        "features like iphone note app",
+        "lock note",
+        "pin note",
+        "Fullstack",
+        "Full Authentication",
+      ],
+    },
+
+    {
+      project: "Copy to clipboard",
+      duration: "MARCH 2025",
+      link: "https://copy-to-clipboard-postgresql-prisma.vercel.app/en",
+      desc: "I made this app where i can add some texts that i need to copy them many times while developing a project or while applying for jobs like the answer to repeated questions like what is expectation the to salary and others",
+      features: [
         "Fullstack",
         "Full Authentication",
       ],
@@ -380,13 +413,7 @@ export const realProjectsExperience = {
       features: ["Dark mode", "Multi-language by next-intl", "Fullstack"],
     },
 
-    {
-      project: "Web Dev Service",
-      duration: "JAN 2025",
-      link: "https://www.wds-oman.com/",
-      desc: "I made this freelance website to let people request me building websites for them as a freelancer.",
-      features: ["Dark mode", "Multi-language by next-intl"],
-    },
+    
   ],
 };
 
