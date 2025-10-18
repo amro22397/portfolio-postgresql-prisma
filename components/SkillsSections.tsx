@@ -1,7 +1,7 @@
 'use client'
 
-import { skills } from '@/public/Constants';
-import { useLocale } from 'next-intl';
+// import { skills } from '@/public/Constants';
+import { useLocale, useTranslations } from 'next-intl';
 import React from 'react'
 
 const SkillsSections = ({ title, skillsArray }: {
@@ -10,13 +10,15 @@ const SkillsSections = ({ title, skillsArray }: {
 }) => {
 
     const locale = useLocale();
+
+    const homePage = useTranslations('HomePage');
   return (
     <section className="flex flex-col items-start justify-center w-full
     max-md:items-center">
 
                 <div className={`text-white text-left mb-[11.70px] font-sans font-semibold
                 text-[16.5px] tracking-wider max-md:mb-5 
-                ${title === "Frontend >" ? "bg-blue-500" : "bg-yellow-600"}
+                ${title === homePage('FrontendSkillSection') ? "bg-blue-500" : "bg-yellow-600"}
                 ${locale === "ar" ? "py-[0.65px] px-3" : "py-[0.2px] px-2"}`}
                 
                 >
