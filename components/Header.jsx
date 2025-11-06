@@ -29,7 +29,8 @@ const Header = ({ email, locale }) => {
 
   return (
     <>
-      <header className="py-8 xl:py-12 text-white hidden xl:flex flex-row items-center justify-between">
+      <header className="xl:py-12 py-8 text-white hidden xl:flex flex-row items-center justify-between
+      ">
         <div className="container mx-auto flex flex-row items-center justify-between">
           <div
             className="flex flex-row items-center gap-8 text-gray-700 dark:text-white
@@ -81,7 +82,7 @@ const Header = ({ email, locale }) => {
         </div>
       </header>
 
-      <div className="block xl:hidden mx-5 mt-6 mb-2">
+      <div className="xl:hidden block mx-5 mt-6 mb-2">
         <div className="mb-7">
           <Nav locale={locale} />
         </div>

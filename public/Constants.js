@@ -38,6 +38,13 @@ export const links = [
     arName: "الصفحة الرئيسية",
     path: "",
   },
+
+  // {
+  //   name: "ًWhat I can do",
+  //   arName: "المهارات",
+  //   path: "/projects",
+  // },
+
   {
     name: "Projects",
     arName: "أعمال سابقة",

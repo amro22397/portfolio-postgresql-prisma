@@ -29,7 +29,7 @@ import Link from 'next/link'
 import { getLocale, getTranslations } from 'next-intl/server'
 import prisma from '@/lib/prisma'
 import { getUser } from '@/actions/getUser'
-import { redirect } from 'next/navigation'
+// import { redirect } from 'next/navigation'
 import SkillsSections from '@/components/SkillsSections'
 
 
@@ -69,7 +69,7 @@ const page = async () => {
 
 
   return (
-    <section className={`${locale === 'ar' && 'right-dir'}`}>
+    <section className={`${locale === 'ar' && 'right-dir'} overflow-x-hidden`}>
       
       <div className="mx-auto h-full flex justify-center flex-col
       ">
@@ -101,17 +101,31 @@ const page = async () => {
 
                 </div>          
 
-            <div className="flex flex-col xl:items-start justify-center gap-6 mt-2
-            items-center">    
+            <div className="flex md:flex-row flex-col xl:items-start xl:justify-start justify-center gap-6 mt-2
+            items-center">
+
+              <Button 
+              variant='outline'
+              size='lg'
+              className={`uppercase flex items-center gap-2
+              dark:bg-blue-600 border-none dark:hover:bg-blue-600/90
+              bg-blue-600 hover:bg-blue-600/90
+               active:scale-95 py-6 rounded-full text-white hover:text-white
+               ${locale === 'ar' ? 'text-md' : 'text-md font-semibold'}`}
+              >
+                <Link href={`/${locale}/services`} 
+                // target='_blank'
+                >{homePage('WhatCanIDo')}</Link>
+              </Button>    
               
               <Button 
               variant='outline'
               size='lg'
               className={`uppercase flex items-center gap-2
-              dark:bg-green-600 border-none dark:hover:bg-green-700
-              bg-green-500 hover:bg-green-600
-               active:scale-95 py-6 rounded-full
-              text-white ${locale === 'ar' ? 'text-md' : 'text-md font-semibold'}`}
+              dark:bg-green-600 border-none dark:hover:bg-green-600/90
+              bg-green-500 hover:bg-green-500/90
+               active:scale-95 py-6 rounded-full text-white hover:text-white
+              ${locale === 'ar' ? 'text-md' : 'text-md font-semibold'}`}
               >
                 <Link href="/RESUME 18-OCT-2025 (Web Developer).pdf" target='_blank'>{homePage('Download CV')}</Link>
                 <FiDownload className='text-xl' />
