@@ -21,8 +21,6 @@ import { SiMaterialformkdocs } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import { FaWpforms } from "react-icons/fa";
 
-
-
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 // import { useTranslations } from 'next-intl';
 // import { title } from 'process';
@@ -372,6 +370,18 @@ export const realProjectsExperience = {
     },
 
     {
+      project: "File storage app",
+      duration: "JAN 2025",
+      link: "https://todo-fullstack-postgresql-prisma.vercel.app/to-dos",
+      desc: "This is a great project where you can upload any things (File - Image - Video - Word - PDF and others...), you can pick your favourites, move items to trash or delete them",
+      features: [
+        "Fullstack",
+        "Full Authentication",
+        "Search Bar to search for files"
+      ],
+    },
+
+    {
       project: "Todo App",
       duration: "JAN 2025",
       link: "https://todo-fullstack-postgresql-prisma.vercel.app/to-dos",
@@ -403,10 +413,7 @@ export const realProjectsExperience = {
       duration: "MARCH 2025",
       link: "https://copy-to-clipboard-postgresql-prisma.vercel.app/en",
       desc: "I made this app where i can add some texts that i need to copy them many times while developing a project or while applying for jobs like the answer to repeated questions like what is expectation the to salary and others",
-      features: [
-        "Fullstack",
-        "Full Authentication",
-      ],
+      features: ["Fullstack", "Full Authentication"],
     },
 
     {
@@ -416,8 +423,6 @@ export const realProjectsExperience = {
       desc: "I made it as you see as a fullstack portfolio which lets me add new projects through a form, edit and delete them, I made multi-language using next-intl library, I made the dark mode and authentication to let my self sign-in and be the only one who can add projects",
       features: ["Dark mode", "Multi-language by next-intl", "Fullstack"],
     },
-
-    
   ],
 };
 
@@ -575,7 +580,6 @@ export const skills = {
         icon: <FaWpforms />,
         name: "Web3Forms",
       },
-    
     ],
 
     backendSkills: [

@@ -14,7 +14,7 @@ const LogIn = () => {
   return (
     <Link href={`/${locale}/login`} className="text-white">
               <Button
-                className={`bg-orange-700 hover:bg-orange-800 active:scale-95
+                className={`bg-orange-700 hover:bg-orange-700/90 active:scale-95
             px-7 py-[22px] rounded-full
              ${locale === "ar" ? "text-md font-semibold" : "text-lg"}`}
               >
