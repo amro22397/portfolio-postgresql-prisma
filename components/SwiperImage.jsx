@@ -20,7 +20,7 @@ const SwiperImage = ({project}) => {
   const locale = useLocale();
   
   return (
-    <div className="w-[98vw] xl:w-[50%] justify-center items-center">
+    <div className="xl:w-[50%] lg:w-[75vw] w-[98vw] justify-center items-center mx-auto">
     <Swiper
     navigation
     pagination
@@ -40,8 +40,8 @@ const SwiperImage = ({project}) => {
         {project.imageUrls.map((image, index) => {
             return (
             <SwiperSlide key={index} className='w-full'>
-                <div className="h-[460px] relative group flex justify-center items-center
-                max-sm:h-[300px] max-md:h-[380px] max-lg:h-[450px]
+                <div className="xl:h-[460px] lg:h-[550px] relative group flex justify-center items-center
+                max-sm:h-[275px] max-md:h-[400px] max-lg:h-[450px]
                 
                 bg-pink-50/20">
                     <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'>

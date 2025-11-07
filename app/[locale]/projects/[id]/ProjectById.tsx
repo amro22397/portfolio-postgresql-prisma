@@ -67,7 +67,7 @@ const ProjectById = ({
   return (
     <div
       className="container flex flex-col max-xl:items-center justify-center mx-auto
-        mt-9 mb-40 overflow-x-hidden"
+        mt-9 mb-40"
     >
       <div
         className="flex flex-col xl:flex-row xl:gap-[30px]
@@ -77,11 +77,11 @@ const ProjectById = ({
         <pre className="hidden">{id}</pre>
 
         <div
-          className=" xl:h-[460px] flex flex-col
+          className="flex flex-col
                 mx-0 max-xl:mx-4 xl:w-full max-w-full "
         >
           <div
-            className={`flex flex-row items-center justify-between
+            className={`flex md:flex-row flex-col items-center justify-between md:gap-0 gap-[14px]
                     mb-10 max-xl:mt-4 ${locale === "ar" && "sm:flex-row flex-col max-sm:gap-y-4 items-start"}`}
                     
           >
@@ -112,11 +112,12 @@ const ProjectById = ({
             <EditDeleteButtons id={id} email={email} locale={locale} />
           </div>
 
-          <div className="flex flex-col gap-5 h-[50%]">
+          <div className={`flex flex-col  items-center gap-5 h-[50%]
+            ${locale === "en" ? "xl:items-start" : locale === "ar" && "xl:items-end"}`}>
             <h2
-              className="text-[42px] font-bold leading-none text-black dark:text-white
-                        group-hover:text-gray-700 transition-all duration-500 capitalize
-                        mb-3"
+              className={`text-[42px] font-bold leading-none text-black dark:text-white
+                        group-hover:text-gray-700 transition-all duration-500 capitalize text-center
+                        mb-3 ${locale === "en" ? "" : locale === "ar" && ""}`}
                         style={{fontFamily: "Arial, Helvetica, sans-serif"}}
             >
               {jProject.title}
@@ -136,8 +137,9 @@ const ProjectById = ({
 
             <div className="w-full">
               <p
-                className="text-gray-800 dark:text-slate-200 text-md whitespace-pre-line
-                        "
+                className={`text-gray-800 dark:text-slate-200 text-md whitespace-pre-line text-center xl:text-left
+                  `}
+                  // ${locale === "en" ? "" : locale === "ar" && "xl:text-right"}
                         style={{fontFamily: "Arial, Helvetica, sans-serif"}}
               >
                 {jProject.description}
@@ -145,8 +147,8 @@ const ProjectById = ({
             </div>
 
             <div
-              className="flex flex-wrap gap-6
-                        text-md font-semibold mt-2 mx-[6px]"
+              className={`flex flex-wrap gap-6 ${locale === "en" ? "xl:justify-start" : locale === "ar" && "xl:justify-end"}
+                        justify-center text-md font-semibold mt-2 mx-[6px]`}
             >
               {jProject.technologiesArray.map((tech: any, index: number) => (
                 <span
@@ -171,7 +173,9 @@ const ProjectById = ({
 
             <div className="border border-black/20"></div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center w-full gap-4"
+            dir=""
+            >
               {jProject.link.trim(" ") === "" ? (
                 <></>
               ) : (

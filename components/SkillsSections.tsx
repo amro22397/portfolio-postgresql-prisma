@@ -14,7 +14,7 @@ const SkillsSections = ({ title, skillsArray }: {
     const homePage = useTranslations('HomePage');
   return (
     <section className="flex flex-col items-start justify-center w-full
-    max-md:items-center">
+    max-md:items-center gap-[10.175px]">
 
                 <div className={`text-white text-left mb-[11.70px] font-sans font-semibold
                 text-[16.5px] tracking-wider max-md:mb-5 

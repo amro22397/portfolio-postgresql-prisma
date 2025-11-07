@@ -71,8 +71,8 @@ const page = async () => {
   return (
     <section className={`${locale === 'ar' && 'right-dir'} overflow-x-hidden`}>
       
-      <div className="mx-auto h-full flex justify-center flex-col
-      ">
+      <div className="mx-auto flex justify-center flex-col
+      overflow-y-hidden">
         <div className="flex flex-col xl:flex-row items-center justify-between
          xl:pt-8 xl:pb-24 xl:mx-10">
           <div className="flex flex-col gap-7 text-center xl:text-left order-2 xl:order-none
