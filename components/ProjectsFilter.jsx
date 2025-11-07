@@ -88,7 +88,9 @@ style={{fontFamily: "Arial, Helvetica, sans-serif"}}
         </div>
 
 <div className="grid grid-cols-3 gap-x-7 gap-y-12 mt-10
-max-sm:grid-cols-1 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2">
+max-sm:grid-cols-1 max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-2"
+dir='ltr'
+>
 
     {projects.length > 0 && projects.map((project, index) => (
         <Link key={index} href={`/${locale}/projects/${project.id}`}
